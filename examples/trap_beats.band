@@ -1,0 +1,238 @@
+// 🔥 TRAP BEATS - Estilo moderno com 808s e hi-hats rápidos
+// Características: BPM alto, 808 profundo, hi-hats em triplets, snares marcantes
+
+bpm 140; timesig 4/4;
+
+instrument bass808: bass;
+instrument synth: guitar;
+
+// === INTRO: 808 + Hi-hats característicos ===
+loop 2 {
+    // 808 profundo sustentado
+    play bass808: note "C1", 127, 1920ms;     // 808 grave por 4 tempos
+    play drums: kick, 120, 240ms;
+    wait 480ms;
+    
+    // Hi-hats rápidos (trap style)
+    play drums: hihat, 70, 120ms;
+    wait 120ms;
+    play drums: hihat, 60, 120ms;
+    wait 120ms;
+    play drums: hihat, 75, 120ms;
+    wait 120ms;
+    play drums: hihat, 65, 120ms;
+    wait 120ms;
+    
+    // Snare no 3º tempo
+    play drums: snare, 110, 240ms;
+    wait 240ms;
+    
+    // Mais hi-hats rápidos
+    play drums: hihat, 70, 120ms;
+    wait 120ms;
+    play drums: hihat, 80, 120ms;
+    wait 120ms;
+    
+    play drums: hihat, 65, 120ms;
+    wait 120ms;
+    play drums: hihat, 70, 120ms;
+    wait 120ms;
+    play drums: hihat, 75, 120ms;
+    wait 120ms;
+    play drums: hihat, 60, 120ms;
+    wait 120ms;
+}
+
+// === VERSE: 808 pattern + trap drums ===
+loop 4 {
+    // 808 slides característicos
+    play bass808: note "C1", 127, 960ms;      // C1 forte
+    play drums: kick, 127, 180ms;
+    wait 480ms;
+    
+    play bass808: note "G0", 120, 480ms;      // Slide down
+    play drums: hihat, 75, 100ms;
+    wait 120ms;
+    play drums: hihat, 65, 100ms;
+    wait 120ms;
+    play drums: hihat, 70, 100ms;
+    wait 120ms;
+    play drums: hihat, 60, 100ms;
+    wait 120ms;
+    
+    // Snare trap marcante
+    play bass808: note "F1", 125, 480ms;
+    play drums: snare, 120, 200ms;
+    wait 240ms;
+    play drums: hihat, 80, 100ms;
+    wait 120ms;
+    play drums: hihat, 70, 100ms;
+    wait 120ms;
+    
+    // 808 volta 
+    play bass808: note "C1", 127, 480ms;
+    play drums: kick, 115, 150ms;
+    wait 240ms;
+    
+    // Triplet hi-hats (característico do trap)
+    play drums: hihat, 70, 80ms;
+    wait 80ms;
+    play drums: hihat, 65, 80ms;
+    wait 80ms;
+    play drums: hihat, 75, 80ms;
+    wait 80ms;
+    play drums: hihat, 60, 80ms;
+    wait 80ms;
+    play drums: hihat, 70, 80ms;
+    wait 80ms;
+    play drums: hihat, 65, 80ms;
+    wait 80ms;
+}
+
+// === CHORUS: Synth lead + 808 + drums completos ===
+loop 4 {
+    // Synth lead melódico (como no trap moderno)
+    play bass808: note "C1", 127, 1920ms;     // 808 sustentado
+    play synth: note "C4", 100, 480ms;        // Lead simple
+    play drums: kick, 127, 200ms;
+    wait 240ms;
+    
+    play synth: note "E4", 95, 240ms;
+    play drums: hihat, 80, 100ms;
+    wait 120ms;
+    play drums: hihat, 70, 100ms;
+    wait 120ms;
+    
+    play synth: note "G4", 105, 480ms;
+    play drums: snare, 120, 200ms;
+    wait 240ms;
+    
+    play drums: hihat, 75, 100ms;
+    wait 120ms;
+    play drums: hihat, 65, 100ms;
+    wait 120ms;
+    
+    // Segunda metade do compasso
+    play synth: note "C5", 110, 240ms;
+    play drums: kick, 120, 150ms;
+    wait 240ms;
+    
+    play synth: note "G4", 90, 240ms;
+    play drums: hihat, 80, 80ms;
+    wait 80ms;
+    play drums: hihat, 70, 80ms;
+    wait 80ms;
+    play drums: hihat, 75, 80ms;
+    wait 80ms;
+    
+    play synth: note "E4", 95, 480ms;
+    play drums: snare, 115, 200ms;
+    wait 240ms;
+    play drums: hihat, 70, 100ms;
+    wait 120ms;
+    play drums: hihat, 80, 100ms;
+    wait 120ms;
+}
+
+// === BREAKDOWN: Só 808 + kicks pesados ===
+loop 2 {
+    // 808 pattern minimalista
+    play bass808: note "C1", 127, 480ms;
+    play drums: kick, 127, 300ms;
+    wait 480ms;
+    
+    wait 480ms;  // Espaço
+    
+    play bass808: note "G0", 120, 480ms;
+    play drums: kick, 125, 300ms;
+    wait 480ms;
+    
+    wait 480ms;  // Espaço
+    
+    play bass808: note "F1", 125, 960ms;
+    play drums: kick, 127, 300ms;
+    wait 480ms;
+    
+    play drums: snare, 120, 200ms;
+    wait 480ms;
+}
+
+// === DROP: Explosão completa ===
+loop 4 {
+    // Tudo junto - 808, synth, drums intensos
+    play bass808: note "C1", 127, 960ms;
+    play synth: chord ["C3", "E3", "G3"], 120, 1920ms;  // Chord trap
+    play drums: kick, 127, 250ms;
+    wait 240ms;
+    
+    // Hi-hats super rápidos
+    play drums: hihat, 85, 60ms;
+    wait 60ms;
+    play drums: hihat, 75, 60ms;
+    wait 60ms;
+    play drums: hihat, 80, 60ms;
+    wait 60ms;
+    play drums: hihat, 70, 60ms;
+    wait 60ms;
+    
+    // Snare com reverb simulado
+    play drums: snare, 127, 300ms;
+    wait 240ms;
+    
+    // Mais hi-hats rápidos
+    play drums: hihat, 80, 60ms;
+    wait 60ms;
+    play drums: hihat, 85, 60ms;
+    wait 60ms;
+    play drums: hihat, 75, 60ms;
+    wait 60ms;
+    play drums: hihat, 70, 60ms;
+    wait 60ms;
+    
+    // 808 slide
+    play bass808: note "G0", 125, 480ms;
+    play drums: kick, 125, 200ms;
+    wait 240ms;
+    
+    // Fill de hi-hats
+    play drums: hihat, 90, 60ms;
+    wait 60ms;
+    play drums: hihat, 80, 60ms;
+    wait 60ms;
+    play drums: hihat, 85, 60ms;
+    wait 60ms;
+    play drums: hihat, 90, 60ms;
+    wait 60ms;
+    
+    play drums: snare, 120, 250ms;
+    wait 240ms;
+}
+
+// === OUTRO: 808 sustentado + hi-hats fade ===
+loop 2 {
+    play bass808: note "C1", 100, 3840ms;     // 808 longo
+    play drums: kick, 100, 240ms;
+    wait 480ms;
+    
+    play drums: hihat, 60, 120ms;
+    wait 240ms;
+    play drums: hihat, 50, 120ms;
+    wait 240ms;
+    
+    play drums: snare, 80, 200ms;
+    wait 480ms;
+    
+    play drums: hihat, 40, 120ms;
+    wait 480ms;
+    
+    // Fade out
+    play drums: kick, 80, 200ms;
+    wait 480ms;
+    
+    play drums: hihat, 30, 120ms;
+    wait 480ms;
+    
+    wait 960ms;  // Silêncio final
+}
+
+export "trap_beats.wav";

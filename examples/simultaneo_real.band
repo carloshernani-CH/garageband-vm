@@ -1,0 +1,122 @@
+// 🎵 MÚSICA REALMENTE SIMULTÂNEA!
+// Agora podemos fazer música de verdade com todos os instrumentos juntos!
+
+bpm 125; timesig 4/4;
+
+instrument baixo: bass;
+instrument guitarra: guitar;
+
+// === INTRO: Estabelecer base harmônica ===
+loop 1 {
+    // TODOS tocam juntos desde o início!
+    play baixo: note "E2", 120, 3840ms;        // Bass sustentado (8 tempos)
+    play guitarra: chord ["E3", "G3", "B3"], 100, 3840ms;  // Acorde sustentado (8 tempos)
+    play drums: kick, 110, 480ms;             // Kick marca o tempo
+    wait 480ms;
+    
+    play drums: hihat, 70, 240ms;             // Hi-hat subdivide
+    wait 240ms;
+    play drums: hihat, 60, 240ms;
+    wait 240ms;
+    
+    play drums: snare, 100, 480ms;            // Snare no 3º tempo
+    wait 480ms;
+    
+    play drums: hihat, 70, 240ms;
+    wait 240ms;
+    play drums: hihat, 80, 240ms;
+    wait 240ms;
+    
+    // Segundo compasso - bass e guitar AINDA tocando!
+    play drums: kick, 115, 240ms;
+    wait 240ms;
+    play drums: kick, 110, 240ms;
+    wait 240ms;
+    
+    play drums: snare, 105, 480ms;
+    wait 480ms;
+    
+    play drums: hihat, 75, 480ms;
+    wait 480ms;
+}
+
+// === VERSO: Progressão harmônica com groove ===
+loop 2 {
+    // Acorde Em (4 tempos) + groove completo
+    play baixo: note "E2", 110, 1920ms;
+    play guitarra: chord ["E3", "G3", "B3"], 95, 1920ms;
+    play drums: kick, 115, 240ms;
+    wait 480ms;
+    play drums: snare, 100, 240ms;
+    wait 480ms;
+    play drums: kick, 110, 240ms;
+    wait 480ms;
+    play drums: snare, 105, 240ms;
+    wait 480ms;
+    
+    // Acorde Am (4 tempos) + groove
+    play baixo: note "A2", 110, 1920ms;
+    play guitarra: chord ["A3", "C4", "E4"], 95, 1920ms;
+    play drums: kick, 115, 240ms;
+    wait 480ms;
+    play drums: hihat, 70, 240ms;
+    wait 240ms;
+    play drums: snare, 100, 240ms;
+    wait 240ms;
+    play drums: hihat, 75, 240ms;
+    wait 480ms;
+    play drums: kick, 110, 240ms;
+    wait 480ms;
+}
+
+// === CHORUS: Densidade máxima ===
+loop 2 {
+    // POWER CHORD + Bass + Drums - TODOS JUNTOS!
+    play baixo: note "E1", 127, 1920ms;       // Bass grave forte
+    play guitarra: chord ["E2", "E3", "B3", "E4"], 120, 1920ms;  // Power chord
+    play drums: kick, 127, 300ms;
+    wait 240ms;
+    play drums: hihat, 80, 120ms;
+    wait 120ms;
+    play drums: hihat, 70, 120ms;
+    wait 120ms;
+    play drums: snare, 115, 300ms;
+    wait 240ms;
+    play drums: hihat, 80, 120ms;
+    wait 120ms;
+    play drums: kick, 120, 180ms;
+    wait 120ms;
+    play drums: snare, 110, 300ms;
+    wait 480ms;
+    
+    // Segundo compasso do chorus
+    play baixo: note "C2", 125, 1920ms;
+    play guitarra: chord ["C3", "E3", "G3", "C4"], 118, 1920ms;
+    play drums: kick, 127, 300ms;
+    wait 480ms;
+    play drums: snare, 115, 300ms;
+    wait 240ms;
+    play drums: kick, 120, 180ms;
+    wait 240ms;
+    play drums: snare, 120, 300ms;
+    wait 480ms;
+    play drums: hihat, 85, 480ms;
+    wait 480ms;
+}
+
+// === OUTRO: Final épico ===
+loop 1 {
+    // Acorde final MASSIVO - todos sustentados
+    play baixo: note "E1", 127, 2880ms;       // 6 tempos
+    play guitarra: chord ["E2", "E3", "G3", "B3", "E4"], 127, 2880ms;  // 6 tempos
+    play drums: kick, 127, 960ms;             // Kick longo
+    wait 960ms;
+    
+    play drums: snare, 110, 960ms;            // Snare sustentado
+    wait 960ms;
+    
+    play drums: kick, 127, 960ms;             // Final com kick
+    wait 960ms;
+}
+
+export "simultaneo_real.wav";
