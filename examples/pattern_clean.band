@@ -1,0 +1,56 @@
+// 🥁 EXEMPLO CLEAN: Patterns sem pausas estranhas
+// Demonstra timing perfeito e limpo
+
+bpm 120; timesig 4/4;
+default_duration quarter;
+
+instrument baixo: bass;
+
+// === PATTERN SIMPLES E CLEAN ===
+
+// Pattern básico 4/4 - bem limpo
+pattern clean_beat {
+    steps 4;
+    resolution quarter;  // 1 step = 1 tempo
+    
+    kick:  "127-0-100-0";   // Kick forte no 1, médio no 3
+    snare: "0-0-127-0";     // Snare forte no tempo 2  
+    hihat: "80-80-80-80";   // Hi-hat constante
+}
+
+// Pattern com mais espaços (para testar otimização)
+pattern sparse_beat {
+    steps 8;
+    resolution eighth;   // 1 step = colcheia
+    
+    kick:  "127-0-0-0-100-0-0-0";  // Só kicks nos tempos 1 e 5
+    snare: "0-0-0-0-127-0-0-0";    // Só snare no tempo 5
+    hihat: "0-70-0-70-0-70-0-70";  // Hi-hat nos contratempos
+}
+
+// === TESTE CLEAN ===
+
+// Teste 1: Pattern básico limpo
+loop 4 {
+    // Bass line simples
+    play baixo: note "E2", 110, whole;  // Bass sustentado 4 tempos
+    
+    // Pattern exato sem pausas extras
+    play pattern clean_beat;
+    
+}
+
+// Teste 2: Pattern esparso (testa otimização)
+loop 4 {
+    // Bass que muda
+    play baixo: note "A2", 115, 2beat;  // 2 tempos
+    
+    // Pattern com muitos espaços vazios
+    play pattern sparse_beat;
+    
+    // Segunda metade
+    play baixo: note "D2", 110, 2beat;  // 2 tempos
+    play pattern sparse_beat;
+}
+
+export "pattern_clean.wav";

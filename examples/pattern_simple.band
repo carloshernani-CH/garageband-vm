@@ -1,0 +1,99 @@
+// 🥁 EXEMPLO SIMPLES: Patterns Rítmicos Precisos
+// Demonstra timing exato como drum machines
+
+bpm 120; timesig 4/4;
+default_duration quarter;
+
+instrument baixo: bass;
+instrument guitarra: guitar;
+
+// === PATTERNS DEFINIDOS ===
+
+// Pattern simples de 4 beats (como você pediu)
+pattern basic_4beat {
+    steps 4;
+    resolution quarter;  // Cada step = 1 tempo (semínima)
+    
+    kick:  "127-0-100-0";   // Kick forte, pausa, kick médio, pausa
+    snare: "0-0-127-0";     // Pausa, pausa, snare forte, pausa
+    hihat: "80-80-80-80";   // Hi-hat constante (como 1010101010)
+}
+
+// Pattern de 8 steps (colcheias)
+pattern groove_8beat {
+    steps 8;
+    resolution eighth;   // Cada step = colcheia
+    
+    kick:  "127-0-0-0-100-0-0-0";    // Kick nos tempos 1 e 5 (beats 1 e 3)
+    snare: "0-0-0-0-127-0-60-0";     // Snare no tempo 5 + ghost note
+    hihat: "70-0-70-0-70-0-70-0";    // Hi-hat intercalado (offbeats)
+}
+
+// Pattern de 16 steps (semicolcheias) - timing super preciso
+pattern tight_16 {
+    steps 16;
+    resolution sixteenth;  // Cada step = semicolcheia
+    
+    kick:  "127-0-0-0-0-0-0-0-100-0-0-0-0-0-0-0";  // Kicks precisos
+    snare: "0-0-0-0-127-0-0-0-0-0-0-0-127-0-0-0";   // Snares exatos
+    hihat: "60-60-60-60-0-60-60-60-60-60-60-60-0-60-60-60";  // Hi-hat quase constante
+}
+
+// === TESTE DOS PATTERNS ===
+
+// Teste 1: Pattern básico + bass line
+loop 4 {
+    // Bass sustentado durante o pattern
+    play baixo: note "E2", 110, whole;              // 4 tempos sustentado
+    play guitarra: chord ["E3","G3","B3"], 85, whole;  // Acorde sustentado
+    
+    // Pattern exato de 4 beats
+    play pattern basic_4beat;
+    wait 4beat;  // Avança exatamente 4 tempos
+}
+
+// Teste 2: Pattern de 8 steps + progressão
+loop 4 {
+    // Harmonia que muda a cada compasso
+    play baixo: note "A2", 115, 2beat;              // 2 tempos
+    play guitarra: chord ["A3","C4","E4"], 90, 2beat;  // 2 tempos
+    
+    // Pattern groove de 8 steps (meio compasso)
+    play pattern groove_8beat;
+    wait 2beat;  // Avança 2 tempos
+    
+    // Segunda metade do compasso
+    play baixo: note "D2", 110, 2beat;              // 2 tempos
+    play guitarra: chord ["D3","F#3","A3"], 85, 2beat; // 2 tempos
+    
+    play pattern groove_8beat;
+    wait 2beat;  // Completa o compasso (4 tempos total)
+}
+
+// Teste 3: Pattern super preciso (16 steps)
+loop 2 {
+    // Bass line minimalista
+    play baixo: note "C2", 120, 4beat;              // Bass sustentado
+    
+    // Pattern ultra-preciso de 16 steps
+    play pattern tight_16;
+    wait 4beat;  // 1 compasso completo
+}
+
+// Teste 4: Mix patterns + instrumentos normais
+loop 2 {
+    // Primeira metade: pattern + harmonia
+    play baixo: note "G2", 115, 2beat;
+    play guitarra: note "G4", 90, quarter;          // Nota curta
+    play pattern basic_4beat;
+    wait quarter;  // Espaço após nota da guitarra
+    wait quarter;  // Espaço
+    
+    // Segunda metade: pattern diferente
+    play baixo: note "F2", 110, 2beat;
+    play guitarra: chord ["F3","A3","C4"], 85, half;   // Acorde médio
+    play pattern groove_8beat;
+    wait 2beat;
+}
+
+export "pattern_simple.wav";

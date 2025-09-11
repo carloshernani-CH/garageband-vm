@@ -1,0 +1,79 @@
+// 🎼 DEMO: Sistema de Notação Musical Automática
+// Sem necessidade de especificar ms manualmente!
+
+bpm 120; timesig 4/4;
+default_duration quarter;  // Padrão: semínima
+auto_advance true;          // Avança automaticamente no tempo
+
+instrument baixo: bass;
+instrument guitarra: guitar;
+
+// === EXEMPLO 1: Durações tradicionais ===
+loop 2 {
+    // Usando valores musicais tradicionais
+    play baixo: note "C2", 110, whole;         // Semibreve (4 tempos)
+    play guitarra: note "C4", 90, half;        // Mínima (2 tempos)
+    play guitarra: note "E4", 90, half;        // Mínima (2 tempos)
+    
+    play baixo: note "G2", 110, quarter;       // Semínima (1 tempo)
+    play guitarra: note "G4", 90, quarter;     // Semínima (1 tempo)
+    play drums: kick, 120, quarter;            // Semínima (1 tempo)
+    play drums: snare, 100, quarter;           // Semínima (1 tempo)
+}
+
+// === EXEMPLO 2: Símbolos curtos ===
+loop 2 {
+    // Usando símbolos musicais curtos
+    play baixo: note "E2", 110, h;             // h = half (mínima)
+    play guitarra: chord ["E3","G3","B3"], 85, h;  // h = half (mínima)
+    
+    play drums: kick, 125, q;                  // q = quarter (semínima)
+    play drums: hihat, 70, e;                  // e = eighth (colcheia)
+    play drums: hihat, 70, e;                  // e = eighth (colcheia)
+    play drums: snare, 110, q;                 // q = quarter (semínima)
+}
+
+// === EXEMPLO 3: Sem especificar duração (usa default) ===
+loop 4 {
+    // Sem duração = usa default_duration (quarter)
+    play baixo: note "A2", 100;                // Automático: quarter
+    play drums: kick, 120;                     // Automático: quarter
+    
+    play guitarra: note "A4", 80;              // Automático: quarter
+    play drums: hihat, 60;                     // Automático: quarter
+    
+    play baixo: note "C3", 100;                // Automático: quarter
+    play drums: snare, 110;                    // Automático: quarter
+    
+    play guitarra: note "C5", 80;              // Automático: quarter
+    play drums: hihat, 60;                     // Automático: quarter
+}
+
+// === EXEMPLO 4: Valores pontuados e especiais ===
+loop 1 {
+    // Notas pontuadas (1.5x a duração)
+    play baixo: note "F2", 115, quarter.;      // Semínima pontuada
+    play guitarra: note "F4", 90, eighth;      // Colcheia (completa o tempo)
+    
+    play baixo: note "G2", 115, half.;         // Mínima pontuada (3 tempos)
+    play drums: kick, 125, quarter;            // Semínima (1 tempo)
+    
+    // Valores especiais
+    play baixo: note "C2", 120, 4beat;         // 4 tempos (compasso completo)
+    play guitarra: chord ["C3","E3","G3","C4"], 95, 4beat;  // Acorde sustentado
+}
+
+// === EXEMPLO 5: Mix de sistemas ===
+loop 2 {
+    // Misturando notação tradicional com automática
+    play baixo: note "D2", 110, half;          // Mínima especificada
+    play guitarra: note "D4", 85;              // Duração automática (quarter)
+    play drums: kick, 120;                     // Duração automática (quarter)
+    
+    // Controlando timing manualmente quando necessário
+    play baixo: note "E2", 110, eighth;        // Colcheia
+    wait eighth;                               // Pausa de colcheia
+    play drums: snare, 110, quarter;           // Semínima
+}
+
+export "musical_notation_demo.wav";
