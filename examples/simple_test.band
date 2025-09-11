@@ -1,0 +1,7 @@
+bpm 120; timesig 4/4;
+
+instrument bass: bass;
+
+play bass: note "E2", 100, 500ms;
+
+export "simple_test.wav";
