@@ -1,0 +1,245 @@
+// 🎸 ROCK ÉPICO FUNCIONAL - Rock Clássico com Estrutura Completa
+// Rock poderoso com múltiplas seções e solos
+
+bpm 120;
+timesig 4/4;
+
+// 🎸 Banda Rock Completa
+instrument bass_rock: bass;
+instrument bass_sub: bass;
+instrument guitar_rhythm: guitar;
+instrument guitar_lead: guitar;
+instrument guitar_solo: guitar;
+
+// 🌅 INTRO ROCK (8 compassos)
+loop 4 {
+    // Intro com power chords
+    play guitar_rhythm: chord ["C3", "G3"], 80, whole;
+    play bass_rock: note "C2", 90, whole;
+    wait whole;
+    
+    play guitar_rhythm: chord ["F3", "C4"], 85, whole;
+    play bass_rock: note "F2", 95, whole;
+    wait whole;
+}
+
+// 🥁 VERSE 1 - BATERIA + GUITARRA (16 compassos)
+loop 16 {
+    // Kick + Snare + Guitar simultâneos
+    play drums: kick, 127, quarter;
+    play drums: hihat, 80, quarter;
+    play bass_rock: note "C2", 120, quarter;
+    play bass_sub: note "C1", 100, quarter;
+    play guitar_rhythm: chord ["C3", "G3", "C4"], 110, quarter;
+    wait quarter;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 70, quarter;
+    play bass_rock: note "E2", 110, quarter;
+    play bass_sub: note "C1", 100, quarter;
+    play guitar_rhythm: chord ["E3", "B3", "E4"], 100, quarter;
+    play guitar_lead: note "G4", 90, quarter;
+    wait quarter;
+    
+    play drums: kick, 120, eighth;
+    play drums: hihat, 100, eighth;
+    play bass_rock: note "G2", 127, eighth;
+    play bass_sub: note "C1", 100, eighth;
+    play guitar_rhythm: chord ["G3", "D4"], 120, eighth;
+    wait eighth;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 110, eighth;
+    play bass_rock: note "A2", 120, eighth;
+    play bass_sub: note "C1", 100, eighth;
+    play guitar_rhythm: chord ["A3", "E4"], 115, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_rock: note "C3", 127, quarter;
+    play bass_sub: note "C1", 110, quarter;
+    play guitar_rhythm: chord ["C4", "G4"], 127, quarter;
+    play guitar_lead: chord ["E4", "G4"], 110, quarter;
+    wait quarter;
+}
+
+// 🚀 CHORUS PODEROSO (12 compassos)
+loop 12 {
+    // Explosão rock total
+    play drums: kick, 127, quarter;
+    play drums: snare, 110, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_rock: note "C2", 127, quarter;
+    play bass_sub: note "C1", 120, quarter;
+    play guitar_rhythm: chord ["C3", "G3", "C4"], 127, quarter;
+    play guitar_lead: chord ["G4", "C5"], 120, quarter;
+    play guitar_solo: note "G5", 110, quarter;
+    wait quarter;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 100, quarter;
+    play bass_rock: note "F2", 120, quarter;
+    play bass_sub: note "C1", 115, quarter;
+    play guitar_rhythm: chord ["F3", "C4", "F4"], 120, quarter;
+    play guitar_lead: chord ["A4", "C5"], 115, quarter;
+    play guitar_solo: note "A5", 105, quarter;
+    wait quarter;
+    
+    play drums: kick, 120, eighth;
+    play drums: hihat, 110, eighth;
+    play bass_rock: note "G2", 127, eighth;
+    play bass_sub: note "C1", 110, eighth;
+    play guitar_rhythm: chord ["G3", "D4"], 125, eighth;
+    play guitar_solo: note "D6", 120, eighth;
+    wait eighth;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 127, eighth;
+    play bass_rock: note "A2", 125, eighth;
+    play bass_sub: note "C1", 110, eighth;
+    play guitar_rhythm: chord ["A3", "E4"], 127, eighth;
+    play guitar_solo: note "E6", 125, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_rock: note "C3", 127, quarter;
+    play bass_sub: note "C1", 120, quarter;
+    play guitar_rhythm: chord ["C4", "G4"], 127, quarter;
+    play guitar_lead: chord ["G4", "C5", "E5"], 127, quarter;
+    play guitar_solo: chord ["C6", "E6"], 120, quarter;
+    wait quarter;
+}
+
+// 🎸 SOLO DE GUITARRA (16 compassos)
+loop 16 {
+    // Base rítmica + solo melódico
+    play drums: kick, 127, quarter;
+    play drums: hihat, 80, quarter;
+    play bass_rock: note "C2", 110, quarter;
+    play guitar_rhythm: chord ["C3", "G3"], 90, quarter;
+    play guitar_solo: note "C5", 120, sixteenth;
+    wait sixteenth;
+    play guitar_solo: note "D5", 115, sixteenth;
+    wait sixteenth;
+    play guitar_solo: note "E5", 120, sixteenth;
+    wait sixteenth;
+    play guitar_solo: note "G5", 125, sixteenth;
+    wait sixteenth;
+    
+    play drums: snare, 120, quarter;
+    play drums: hihat, 90, quarter;
+    play bass_rock: note "F2", 105, quarter;
+    play guitar_rhythm: chord ["F3", "C4"], 85, quarter;
+    play guitar_solo: note "A5", 127, eighth;
+    wait eighth;
+    play guitar_solo: note "C6", 120, eighth;
+    wait eighth;
+    
+    play drums: kick, 110, eighth;
+    play drums: hihat, 100, eighth;
+    play bass_rock: note "G2", 120, eighth;
+    play guitar_solo: note "E6", 127, eighth;
+    wait eighth;
+    
+    play drums: kick, 125, eighth;
+    play drums: hihat, 110, eighth;
+    play bass_rock: note "A2", 115, eighth;
+    play guitar_solo: note "G6", 125, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_rock: note "C3", 127, quarter;
+    play guitar_rhythm: chord ["C4", "G4"], 100, quarter;
+    play guitar_solo: chord ["C6", "E6"], 127, quarter;
+    wait quarter;
+}
+
+// 🌊 BRIDGE CALMO (8 compassos)
+loop 8 {
+    // Seção mais tranquila
+    play drums: kick, 80, half;
+    play drums: hihat, 40, half;
+    play bass_rock: note "A2", 70, half;
+    play guitar_rhythm: chord ["A2", "C3", "E3"], 60, half;
+    wait half;
+    
+    play drums: snare, 90, half;
+    play drums: hihat, 50, half;
+    play bass_rock: note "F2", 75, half;
+    play guitar_rhythm: chord ["F2", "A2", "C3"], 65, half;
+    wait half;
+}
+
+// 🚀 FINAL EXPLOSIVO (20 compassos)
+loop 20 {
+    // APOTEOSE ROCK - tudo no máximo
+    play drums: kick, 127, quarter;
+    play drums: snare, 120, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_rock: note "C2", 127, quarter;
+    play bass_sub: note "C1", 127, quarter;
+    play guitar_rhythm: chord ["C3", "G3", "C4"], 127, quarter;
+    play guitar_lead: chord ["G4", "C5", "E5"], 127, quarter;
+    play guitar_solo: chord ["C6", "E6", "G6"], 127, quarter;
+    wait quarter;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 110, quarter;
+    play bass_rock: note "F2", 125, quarter;
+    play bass_sub: note "C1", 120, quarter;
+    play guitar_rhythm: chord ["F3", "C4", "F4"], 125, quarter;
+    play guitar_lead: chord ["A4", "C5", "F5"], 125, quarter;
+    play guitar_solo: chord ["F6", "A6", "C7"], 125, quarter;
+    wait quarter;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 127, eighth;
+    play bass_rock: note "G2", 127, eighth;
+    play bass_sub: note "C1", 115, eighth;
+    play guitar_rhythm: chord ["G3", "D4"], 127, eighth;
+    play guitar_solo: note "G7", 127, eighth;
+    wait eighth;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 127, eighth;
+    play bass_rock: note "A2", 127, eighth;
+    play bass_sub: note "C1", 115, eighth;
+    play guitar_rhythm: chord ["A3", "E4"], 127, eighth;
+    play guitar_solo: note "A7", 127, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_rock: note "C3", 127, quarter;
+    play bass_sub: note "C1", 127, quarter;
+    play guitar_rhythm: chord ["C4", "G4"], 127, quarter;
+    play guitar_lead: chord ["G4", "C5", "E5", "G5"], 127, quarter;
+    play guitar_solo: chord ["C7", "E7", "G7"], 127, quarter;
+    wait quarter;
+}
+
+// 🌅 OUTRO ROCK (4 compassos)
+loop 2 {
+    // Final poderoso
+    play drums: kick, 100, whole;
+    play drums: snare, 100, whole;
+    play bass_rock: note "C2", 100, whole;
+    play guitar_rhythm: chord ["C3", "E3", "G3"], 100, whole;
+    wait whole;
+}
+
+// Fade final
+play drums: kick, 60, whole;
+play bass_rock: note "C2", 60, whole;
+play guitar_rhythm: chord ["C3", "E3", "G3"], 60, whole;
+wait whole;
+
+play drums: kick, 30, whole;
+play bass_rock: note "C2", 30, whole;
+play guitar_rhythm: chord ["C3", "E3", "G3"], 30, whole;
+wait whole;
+
+export "rock_epico_funcional.wav";

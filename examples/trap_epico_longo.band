@@ -1,0 +1,260 @@
+// 🔥 TRAP ÉPICO LONGO - Música Completa com Estrutura
+// Trap moderno com 808s pesados, hi-hats rápidos e drops épicos
+
+bpm 140;
+timesig 4/4;
+
+// 🎸 Arsenal de instrumentos
+instrument trap_bass: bass;
+instrument sub_bass: bass;
+instrument synth_lead: guitar;
+instrument synth_pad: guitar;
+instrument arp_synth: guitar;
+
+// 🌅 INTRO ATMOSFÉRICO (8 compassos)
+loop 4 {
+    // Pad atmosférico crescendo
+    play synth_pad: chord ["C2", "Eb2", "G2"], 40, whole;
+    wait whole;
+    play synth_pad: chord ["Bb2", "D3", "F3"], 50, whole;  
+    wait whole;
+}
+
+// 🎵 VERSE 1 - Construção (16 compassos)
+loop 16 {
+    // Beat principal: Kick + Hi-hat simultâneos
+    play drums: kick, 127, quarter;
+    play drums: hihat, 60, quarter;
+    play trap_bass: note "C1", 110, quarter;
+    play synth_pad: chord ["C2", "Eb2", "G2"], 60, quarter;
+    wait quarter;
+    
+    // Snare + Hi-hat no meio
+    play drums: snare, 100, quarter;
+    play drums: hihat, 80, quarter;
+    play trap_bass: note "Eb1", 90, quarter;
+    wait quarter;
+    
+    // Kick duplo + Hi-hat
+    play drums: kick, 120, eighth;
+    play drums: hihat, 70, eighth;
+    play trap_bass: note "F1", 100, eighth;
+    wait eighth;
+    
+    play drums: kick, 110, eighth;
+    play drums: hihat, 90, eighth;
+    play trap_bass: note "G1", 120, eighth;
+    wait eighth;
+    
+    // Snare final + Hi-hat triplo
+    play drums: snare, 127, quarter;
+    play drums: hihat, 100, quarter;
+    play trap_bass: note "C2", 100, quarter;
+    play synth_lead: note "C4", 80, quarter;
+    wait quarter;
+}
+
+// 🚀 PRE-CHORUS - Build Up (8 compassos)
+loop 8 {
+    // Intensidade crescente
+    play drums: kick, 127, quarter;
+    play drums: hihat, 90, quarter;
+    play trap_bass: note "C1", 127, quarter;
+    play sub_bass: note "C0", 100, quarter;
+    play arp_synth: note "C4", 90, sixteenth;
+    wait sixteenth;
+    play arp_synth: note "Eb4", 90, sixteenth;
+    wait sixteenth;
+    play arp_synth: note "G4", 90, sixteenth;
+    wait sixteenth;
+    play arp_synth: note "C5", 90, sixteenth;
+    wait sixteenth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 100, quarter;
+    play trap_bass: note "Eb1", 120, quarter;
+    play sub_bass: note "C0", 100, quarter;
+    play arp_synth: note "Eb5", 100, eighth;
+    wait eighth;
+    play arp_synth: note "G5", 100, eighth;
+    wait eighth;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 80, eighth;
+    play trap_bass: note "F1", 127, eighth;
+    wait eighth;
+    
+    play drums: kick, 120, eighth;
+    play drums: hihat, 110, eighth;
+    play trap_bass: note "G1", 120, eighth;
+    wait eighth;
+    
+    // Build final
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play trap_bass: note "C2", 127, quarter;
+    play synth_lead: chord ["C4", "Eb4", "G4"], 110, quarter;
+    wait quarter;
+}
+
+// 🔥 CHORUS - DROP ÉPICO (16 compassos)
+loop 16 {
+    // DROP PESADO - Tudo simultâneo no máximo
+    play drums: kick, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play trap_bass: note "C1", 127, quarter;
+    play sub_bass: note "C0", 120, quarter;
+    play synth_lead: chord ["C3", "Eb3", "G3"], 127, quarter;
+    play synth_pad: chord ["C2", "Eb2", "G2", "C3"], 100, quarter;
+    play arp_synth: note "C5", 110, quarter;
+    wait quarter;
+    
+    // Snare bomba + todos os elementos
+    play drums: snare, 127, quarter;
+    play drums: hihat, 100, quarter;
+    play trap_bass: note "Eb1", 127, quarter;
+    play sub_bass: note "C0", 120, quarter;
+    play synth_lead: chord ["Eb3", "G3", "Bb3"], 120, quarter;
+    play synth_pad: chord ["C2", "Eb2", "G2", "C3"], 100, quarter;
+    play arp_synth: note "Eb5", 100, quarter;
+    wait quarter;
+    
+    // Hi-hat roll + kick duplo
+    play drums: kick, 120, eighth;
+    play drums: hihat, 90, eighth;
+    play trap_bass: note "F1", 120, eighth;
+    play sub_bass: note "C0", 100, eighth;
+    wait eighth;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 110, eighth;
+    play trap_bass: note "G1", 127, eighth;
+    play sub_bass: note "C0", 100, eighth;
+    wait eighth;
+    
+    // Final explosivo
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play trap_bass: note "C2", 127, quarter;
+    play sub_bass: note "C0", 120, quarter;
+    play synth_lead: chord ["C4", "G4", "C5"], 127, quarter;
+    play synth_pad: chord ["C2", "Eb2", "G2", "C3"], 100, quarter;
+    play arp_synth: note "C6", 120, quarter;
+    wait quarter;
+}
+
+// 🎸 VERSE 2 - Variação (12 compassos)
+loop 12 {
+    // Padrão diferente para variedade
+    play drums: kick, 127, quarter;
+    play drums: hihat, 70, quarter;
+    play trap_bass: note "A1", 110, quarter;
+    play synth_lead: note "A4", 80, quarter;
+    wait quarter;
+    
+    play drums: hihat, 90, eighth;
+    wait eighth;
+    play drums: snare, 120, eighth;
+    play drums: hihat, 100, eighth;
+    play trap_bass: note "C2", 100, eighth;
+    wait eighth;
+    
+    play drums: kick, 110, quarter;
+    play drums: hihat, 80, quarter;
+    play trap_bass: note "F1", 120, quarter;
+    play synth_lead: note "F4", 90, quarter;
+    wait quarter;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 110, quarter;
+    play trap_bass: note "G1", 110, quarter;
+    play synth_lead: chord ["G4", "C5"], 100, quarter;
+    wait quarter;
+}
+
+// 🌊 BRIDGE - Breakdown (8 compassos)
+loop 8 {
+    // Seção mais calma
+    play drums: kick, 100, half;
+    play drums: hihat, 50, half;
+    play trap_bass: note "C1", 80, half;
+    play synth_pad: chord ["C2", "E2", "G2"], 70, half;
+    wait half;
+    
+    play drums: snare, 110, half;
+    play drums: hihat, 60, half;
+    play trap_bass: note "G1", 90, half;
+    play synth_pad: chord ["G2", "B2", "D3"], 70, half;
+    wait half;
+}
+
+// 🚀 FINAL CHORUS - APOTEOSE (20 compassos)
+loop 20 {
+    // TUDO no máximo volume e complexidade
+    play drums: kick, 127, quarter;
+    play drums: snare, 100, quarter;
+    play drums: hihat, 127, quarter;
+    play trap_bass: note "C1", 127, quarter;
+    play sub_bass: note "C0", 127, quarter;
+    play synth_lead: chord ["C3", "E3", "G3", "C4"], 127, quarter;
+    play synth_pad: chord ["C1", "E1", "G1", "C2"], 110, quarter;
+    play arp_synth: chord ["C5", "E5", "G5"], 120, quarter;
+    wait quarter;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 110, quarter;
+    play trap_bass: note "E1", 120, quarter;
+    play sub_bass: note "C0", 120, quarter;
+    play synth_lead: chord ["E3", "G3", "B3", "E4"], 120, quarter;
+    play synth_pad: chord ["C1", "E1", "G1", "C2"], 110, quarter;
+    play arp_synth: chord ["E5", "G5", "B5"], 110, quarter;
+    wait quarter;
+    
+    play drums: kick, 120, eighth;
+    play drums: hihat, 100, eighth;
+    play trap_bass: note "G1", 127, eighth;
+    play sub_bass: note "C0", 110, eighth;
+    wait eighth;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 127, eighth;
+    play trap_bass: note "A1", 120, eighth;
+    play sub_bass: note "C0", 110, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play trap_bass: note "C2", 127, quarter;
+    play sub_bass: note "C0", 127, quarter;
+    play synth_lead: chord ["C4", "G4", "C5", "E5"], 127, quarter;
+    play synth_pad: chord ["C1", "E1", "G1", "C2"], 120, quarter;
+    play arp_synth: chord ["C6", "E6", "G6"], 127, quarter;
+    wait quarter;
+}
+
+// 🌅 OUTRO ÉPICO (6 compassos)
+loop 3 {
+    // Final cinematográfico
+    play drums: kick, 127, whole;
+    play drums: snare, 127, whole;
+    play drums: hihat, 100, whole;
+    play trap_bass: note "C1", 127, whole;
+    play sub_bass: note "C0", 120, whole;
+    play synth_lead: chord ["C2", "E2", "G2", "C3", "E3", "G3"], 127, whole;
+    play synth_pad: chord ["C0", "E0", "G0", "C1"], 110, whole;
+    play arp_synth: chord ["C5", "E5", "G5", "C6"], 120, whole;
+    wait whole;
+}
+
+// Final com fade
+play drums: kick, 80, whole;
+play trap_bass: note "C1", 80, whole;
+play synth_pad: chord ["C1", "E1", "G1"], 60, whole;
+wait whole;
+
+play drums: kick, 40, whole;
+play trap_bass: note "C1", 40, whole;
+play synth_pad: chord ["C1", "E1", "G1"], 30, whole;
+wait whole;
+
+export "trap_epico_longo.wav";

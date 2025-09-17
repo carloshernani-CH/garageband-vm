@@ -1,0 +1,291 @@
+// ⚡ BACK IN STACK - Hard Rock Epic Programming Anthem
+// Inspirado em "Back in Black" (AC/DC) - Um hino hard rock sobre estruturas de dados
+// "I'm back in stack, yes I'm back in stack!"
+
+bpm 120;
+timesig 4/4;
+
+// 🎸 Arsenal Hard Rock Clássico
+instrument rhythm_guitar: guitar;
+instrument lead_guitar: guitar;
+instrument bass_heavy: bass;
+instrument power_chord_guitar: guitar;
+instrument stack_synth: guitar;
+
+// 🔥 INTRO CLÁSSICO - Riff icônico (8 compassos)
+loop 4 {
+    // Riff principal power chords
+    play rhythm_guitar: chord ["E2", "G2"], 110, quarter;
+    play bass_heavy: note "E1", 120, quarter;
+    wait quarter;
+    
+    play rhythm_guitar: chord ["E2", "G2"], 105, eighth;
+    play bass_heavy: note "E1", 115, eighth;
+    wait eighth;
+    
+    play rhythm_guitar: chord ["E2", "G2"], 115, eighth;
+    play bass_heavy: note "E1", 125, eighth;
+    wait eighth;
+    
+    play drums: kick, 120, quarter;
+    play drums: snare, 100, quarter;
+    play rhythm_guitar: chord ["D2", "F2"], 110, quarter;
+    play bass_heavy: note "D1", 120, quarter;
+    wait quarter;
+    
+    play drums: hihat, 90, quarter;
+    play rhythm_guitar: chord ["A2", "C3"], 115, quarter;
+    play bass_heavy: note "A1", 125, quarter;
+    wait quarter;
+}
+
+// 🥁 VERSE 1 - "Been too long, I'm glad to be back" (16 compassos)
+loop 8 {
+    // Bateria pesada entra
+    play drums: kick, 127, quarter;
+    play drums: hihat, 90, quarter;
+    play bass_heavy: note "E1", 127, quarter;
+    play rhythm_guitar: chord ["E3", "G3", "B3"], 120, quarter;
+    play stack_synth: note "E4", 80, quarter;
+    wait quarter;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 95, quarter;
+    play bass_heavy: note "G1", 125, quarter;
+    play rhythm_guitar: chord ["G3", "B3", "D4"], 115, quarter;
+    play stack_synth: note "G4", 85, quarter;
+    wait quarter;
+    
+    play drums: kick, 120, eighth;
+    play drums: hihat, 100, eighth;
+    play bass_heavy: note "A1", 127, eighth;
+    play rhythm_guitar: chord ["A3", "C4"], 125, eighth;
+    wait eighth;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 105, eighth;
+    play bass_heavy: note "B1", 125, eighth;
+    play rhythm_guitar: chord ["B3", "D4"], 120, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_heavy: note "E2", 127, quarter;
+    play rhythm_guitar: chord ["E4", "G4", "B4"], 127, quarter;
+    play stack_synth: chord ["E4", "B4"], 100, quarter;
+    wait quarter;
+}
+
+// 🎸 PRE-CHORUS - "Yes I'm let loose from the noose" (8 compassos)
+loop 4 {
+    // Build-up com power chords
+    play drums: kick, 127, quarter;
+    play drums: hihat, 100, quarter;
+    play bass_heavy: note "C1", 127, quarter;
+    play power_chord_guitar: chord ["C3", "G3"], 120, quarter;
+    play rhythm_guitar: chord ["C4", "E4", "G4"], 115, quarter;
+    wait quarter;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 110, quarter;
+    play bass_heavy: note "D1", 125, quarter;
+    play power_chord_guitar: chord ["D3", "A3"], 125, quarter;
+    play rhythm_guitar: chord ["D4", "F4", "A4"], 120, quarter;
+    wait quarter;
+    
+    play drums: kick, 125, eighth;
+    play drums: hihat, 115, eighth;
+    play bass_heavy: note "E1", 127, eighth;
+    play power_chord_guitar: chord ["E3", "B3"], 127, eighth;
+    wait eighth;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 120, eighth;
+    play bass_heavy: note "F1", 125, eighth;
+    play power_chord_guitar: chord ["F3", "C4"], 125, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_heavy: note "G1", 127, quarter;
+    play power_chord_guitar: chord ["G3", "D4"], 127, quarter;
+    play rhythm_guitar: chord ["G4", "B4", "D5"], 127, quarter;
+    wait quarter;
+}
+
+// 🔥 CHORUS - "I'M BACK IN STACK!" (16 compassos)
+loop 8 {
+    // CHORUS ÉPICO - todos os instrumentos no máximo
+    play drums: kick, 127, quarter;
+    play drums: snare, 110, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_heavy: note "E1", 127, quarter;
+    play rhythm_guitar: chord ["E3", "G3", "B3"], 127, quarter;
+    play power_chord_guitar: chord ["E4", "G4", "B4"], 127, quarter;
+    play lead_guitar: note "E5", 120, quarter;
+    play stack_synth: chord ["E3", "B3"], 110, quarter;
+    wait quarter;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 115, quarter;
+    play bass_heavy: note "A1", 127, quarter;
+    play rhythm_guitar: chord ["A3", "C4", "E4"], 127, quarter;
+    play power_chord_guitar: chord ["A4", "C5", "E5"], 127, quarter;
+    play lead_guitar: note "A5", 125, quarter;
+    play stack_synth: chord ["A3", "E4"], 115, quarter;
+    wait quarter;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 127, eighth;
+    play bass_heavy: note "D2", 127, eighth;
+    play power_chord_guitar: chord ["D4", "A4"], 127, eighth;
+    play lead_guitar: note "D6", 127, eighth;
+    wait eighth;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 127, eighth;
+    play bass_heavy: note "E2", 127, eighth;
+    play power_chord_guitar: chord ["E4", "B4"], 127, eighth;
+    play lead_guitar: note "E6", 127, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_heavy: note "A2", 127, quarter;
+    play rhythm_guitar: chord ["A4", "C5", "E5"], 127, quarter;
+    play power_chord_guitar: chord ["A5", "C6", "E6"], 127, quarter;
+    play lead_guitar: chord ["A6", "C7"], 127, quarter;
+    play stack_synth: chord ["A4", "E5"], 120, quarter;
+    wait quarter;
+}
+
+// 🎸 GUITAR SOLO - Stack operations em música (20 compassos)
+loop 10 {
+    // Solo épico representando PUSH/POP operations
+    play drums: kick, 127, quarter;
+    play drums: hihat, 100, quarter;
+    play bass_heavy: note "E1", 127, quarter;
+    play rhythm_guitar: chord ["E3", "G3", "B3"], 120, quarter;
+    // PUSH operation - notas ascendentes
+    play lead_guitar: note "E4", 127, sixteenth;
+    wait sixteenth;
+    play lead_guitar: note "G4", 125, sixteenth;
+    wait sixteenth;
+    play lead_guitar: note "B4", 127, sixteenth;
+    wait sixteenth;
+    play lead_guitar: note "E5", 127, sixteenth;
+    wait sixteenth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 110, quarter;
+    play bass_heavy: note "A1", 125, quarter;
+    play rhythm_guitar: chord ["A3", "C4", "E4"], 115, quarter;
+    // POP operation - notas descendentes
+    play lead_guitar: note "A5", 127, eighth;
+    wait eighth;
+    play lead_guitar: note "E5", 125, eighth;
+    wait eighth;
+    
+    play drums: kick, 120, eighth;
+    play drums: hihat, 115, eighth;
+    play bass_heavy: note "D2", 127, eighth;
+    play lead_guitar: note "D6", 127, eighth;
+    wait eighth;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 120, eighth;
+    play bass_heavy: note "G1", 125, eighth;
+    play lead_guitar: note "G5", 125, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_heavy: note "C2", 127, quarter;
+    play rhythm_guitar: chord ["C4", "E4", "G4"], 127, quarter;
+    play lead_guitar: chord ["C6", "E6", "G6"], 127, quarter;
+    play stack_synth: chord ["C4", "G4"], 115, quarter;
+    wait quarter;
+}
+
+// 🔥 FINAL CHORUS - "I'M BACK IN STACK!" (16 compassos)
+loop 8 {
+    // Chorus final ainda mais intenso
+    play drums: kick, 127, quarter;
+    play drums: snare, 120, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_heavy: note "E1", 127, quarter;
+    play rhythm_guitar: chord ["E3", "G3", "B3"], 127, quarter;
+    play power_chord_guitar: chord ["E4", "G4", "B4"], 127, quarter;
+    play lead_guitar: chord ["E5", "G5", "B5"], 127, quarter;
+    play stack_synth: chord ["E3", "B3", "E4"], 127, quarter;
+    wait quarter;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_heavy: note "A1", 127, quarter;
+    play rhythm_guitar: chord ["A3", "C4", "E4"], 127, quarter;
+    play power_chord_guitar: chord ["A4", "C5", "E5"], 127, quarter;
+    play lead_guitar: chord ["A5", "C6", "E6"], 127, quarter;
+    play stack_synth: chord ["A3", "E4", "A4"], 127, quarter;
+    wait quarter;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 127, eighth;
+    play bass_heavy: note "D2", 127, eighth;
+    play power_chord_guitar: chord ["D4", "A4"], 127, eighth;
+    play lead_guitar: note "D7", 127, eighth;
+    wait eighth;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 127, eighth;
+    play bass_heavy: note "E2", 127, eighth;
+    play power_chord_guitar: chord ["E4", "B4"], 127, eighth;
+    play lead_guitar: note "E7", 127, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_heavy: note "A2", 127, quarter;
+    play rhythm_guitar: chord ["A4", "C5", "E5"], 127, quarter;
+    play power_chord_guitar: chord ["A5", "C6", "E6"], 127, quarter;
+    play lead_guitar: chord ["A6", "C7", "E7"], 127, quarter;
+    play stack_synth: chord ["A4", "E5", "A5"], 127, quarter;
+    wait quarter;
+}
+
+// 🎸 OUTRO - Riff final (8 compassos)
+loop 4 {
+    // Volta ao riff clássico
+    play drums: kick, 120, quarter;
+    play bass_heavy: note "E1", 120, quarter;
+    play rhythm_guitar: chord ["E2", "G2"], 110, quarter;
+    wait quarter;
+    
+    play drums: snare, 110, eighth;
+    play bass_heavy: note "E1", 115, eighth;
+    play rhythm_guitar: chord ["E2", "G2"], 105, eighth;
+    wait eighth;
+    
+    play drums: hihat, 100, eighth;
+    play bass_heavy: note "E1", 125, eighth;
+    play rhythm_guitar: chord ["E2", "G2"], 115, eighth;
+    wait eighth;
+    
+    play drums: kick, 127, quarter;
+    play bass_heavy: note "E2", 127, quarter;
+    play rhythm_guitar: chord ["E3", "G3"], 120, quarter;
+    play power_chord_guitar: chord ["E4", "G4"], 110, quarter;
+    wait quarter;
+    
+    wait quarter;
+}
+
+// Final power chord
+play drums: kick, 127, whole;
+play bass_heavy: note "E1", 127, whole;
+play rhythm_guitar: chord ["E3", "G3", "B3"], 127, whole;
+play power_chord_guitar: chord ["E4", "G4", "B4"], 127, whole;
+play lead_guitar: chord ["E5", "G5", "B5"], 127, whole;
+wait whole;
+
+export "back_in_stack.wav";

@@ -1,0 +1,77 @@
+// 🎷 Jazz Moderno - Swing e Improvisação
+// Jazz contemporâneo com bateria swingada
+
+bpm 120;
+timesig 4/4;
+
+// 🎸 Instrumentos de jazz
+instrument bass_jazz: bass;
+instrument piano_jazz: guitar;
+instrument sax_lead: guitar;
+
+// 🎵 6 compassos de jazz swing
+loop 6 {
+    // Bateria jazz com swing
+    play drums: kick, 100, quarter;
+    wait quarter;
+    play drums: snare, 80, quarter;
+    wait quarter;
+    play drums: kick, 90, quarter;
+    wait quarter;
+    play drums: snare, 100, quarter;
+    wait quarter;
+    
+    // Ride cymbal simulado com hihat
+    play drums: hihat, 70, eighth;
+    wait sixteenth;
+    play drums: hihat, 50, sixteenth;
+    wait eighth;
+    play drums: hihat, 80, eighth;
+    wait sixteenth;
+    play drums: hihat, 60, sixteenth;
+    wait eighth;
+    play drums: hihat, 70, eighth;
+    wait sixteenth;
+    play drums: hihat, 50, sixteenth;
+    wait eighth;
+    play drums: hihat, 90, eighth;
+    wait sixteenth;
+    play drums: hihat, 60, sixteenth;
+    wait eighth;
+    
+    // Walking bass
+    play bass_jazz: note "C2", 100, quarter;
+    wait quarter;
+    play bass_jazz: note "E2", 90, quarter;
+    wait quarter;
+    play bass_jazz: note "G2", 110, quarter;
+    wait quarter;
+    play bass_jazz: note "A2", 95, quarter;
+    wait quarter;
+    
+    // Piano comping
+    play piano_jazz: chord ["C3", "E3", "G3"], 80, eighth;
+    wait quarter;
+    play piano_jazz: chord ["A3", "C4", "E4"], 70, eighth;
+    wait quarter;
+    play piano_jazz: chord ["F3", "A3", "C4"], 85, eighth;
+    wait quarter;
+    play piano_jazz: chord ["G3", "B3", "D4"], 75, eighth;
+    wait quarter;
+    
+    // Sax lead improvisacional
+    play sax_lead: note "G4", 90, quarter;
+    wait eighth;
+    play sax_lead: note "A4", 80, eighth;
+    wait quarter;
+    play sax_lead: note "C5", 100, quarter;
+    wait quarter;
+    play sax_lead: note "E5", 110, eighth;
+    wait eighth;
+    play sax_lead: note "D5", 90, quarter;
+    wait quarter;
+    
+    wait whole;
+}
+
+export "jazz_moderno.wav";

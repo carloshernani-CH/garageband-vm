@@ -1,0 +1,25 @@
+// 🎵 Demo Básico - Primeiro Contato com BandLang
+// Mostra os conceitos fundamentais de forma simples e clara
+
+bpm 120;
+timesig 4/4;
+
+// 🎸 Instrumentos
+instrument baixo: bass;
+instrument guitarra: guitar;
+
+// 🎵 Melodia simples e cativante
+play baixo: note "C3", 100, quarter;
+wait quarter;
+play baixo: note "E3", 100, quarter;
+wait quarter;
+play baixo: note "G3", 100, quarter;
+wait quarter;
+play baixo: note "C4", 100, quarter;
+wait quarter;
+
+// 🎼 Acorde final
+play guitarra: chord ["C3", "E3", "G3"], 127, half;
+wait half;
+
+export "demo_basico.wav";

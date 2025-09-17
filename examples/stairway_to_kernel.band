@@ -1,0 +1,219 @@
+// 🎸 STAIRWAY TO KERNEL - Epic Progressive Rock
+// Inspirado em "Stairway to Heaven" - Uma jornada épica através dos níveis do sistema
+// Do userspace ao kernel space, uma escalada tecnológica musical
+
+bpm 72;
+timesig 4/4;
+
+// 🎸 Orquestra Rock Progressiva
+instrument acoustic_guitar: guitar;
+instrument electric_guitar: guitar;
+instrument bass_prog: bass;
+instrument lead_guitar: guitar;
+instrument synth_strings: guitar;
+instrument synth_organ: guitar;
+
+// 🌅 PARTE I: USERSPACE ACÚSTICO (Início suave - 16 compassos)
+loop 8 {
+    // Fingerpicking acústico suave
+    play acoustic_guitar: note "A3", 60, quarter;
+    wait quarter;
+    play acoustic_guitar: note "C4", 65, eighth;
+    wait eighth;
+    play acoustic_guitar: note "D4", 70, eighth;
+    wait eighth;
+    
+    play acoustic_guitar: note "F4", 75, quarter;
+    wait quarter;
+    play acoustic_guitar: note "G4", 70, quarter;
+    wait quarter;
+}
+
+// 🎵 PARTE II: SYSTEM CALLS (Introdução do bass - 12 compassos)
+loop 6 {
+    // Bass entra suavemente
+    play acoustic_guitar: chord ["A3", "C4", "E4"], 70, half;
+    play bass_prog: note "A1", 80, half;
+    wait half;
+    
+    play acoustic_guitar: chord ["F3", "A3", "C4"], 75, half;
+    play bass_prog: note "F1", 85, half;
+    wait half;
+}
+
+// 🔄 PARTE III: PROCESS SCHEDULING (Complexity increasing - 16 compassos)
+loop 8 {
+    // Patterns mais complexos
+    play acoustic_guitar: chord ["A3", "C4", "E4"], 85, quarter;
+    play bass_prog: note "A1", 90, quarter;
+    play synth_strings: chord ["A2", "C3", "E3"], 60, quarter;
+    wait quarter;
+    
+    play acoustic_guitar: chord ["G3", "B3", "D4"], 80, eighth;
+    play bass_prog: note "G1", 85, eighth;
+    wait eighth;
+    
+    play acoustic_guitar: chord ["F3", "A3", "C4"], 90, eighth;
+    play bass_prog: note "F1", 95, eighth;
+    wait eighth;
+    
+    play drums: kick, 70, quarter;
+    play drums: hihat, 50, quarter;
+    play acoustic_guitar: chord ["C4", "E4", "G4"], 85, quarter;
+    play bass_prog: note "C2", 90, quarter;
+    wait quarter;
+}
+
+// ⚡ PARTE IV: INTERRUPT HANDLERS (Electric guitar entra - 20 compassos)
+loop 10 {
+    // Guitarra elétrica junta-se à festa
+    play drums: kick, 100, quarter;
+    play drums: hihat, 80, quarter;
+    play bass_prog: note "A1", 110, quarter;
+    play electric_guitar: chord ["A3", "C4", "E4"], 95, quarter;
+    play synth_strings: chord ["A2", "C3", "E3"], 80, quarter;
+    wait quarter;
+    
+    play drums: snare, 110, quarter;
+    play drums: hihat, 85, quarter;
+    play bass_prog: note "F1", 105, quarter;
+    play electric_guitar: chord ["F3", "A3", "C4"], 90, quarter;
+    play synth_organ: chord ["F2", "A2", "C3"], 75, quarter;
+    wait quarter;
+    
+    play drums: kick, 95, eighth;
+    play drums: hihat, 90, eighth;
+    play bass_prog: note "G1", 115, eighth;
+    play electric_guitar: note "G4", 100, eighth;
+    wait eighth;
+    
+    play drums: kick, 105, eighth;
+    play drums: hihat, 95, eighth;
+    play bass_prog: note "C2", 120, eighth;
+    play electric_guitar: note "C5", 105, eighth;
+    wait eighth;
+    
+    play drums: snare, 120, quarter;
+    play drums: hihat, 100, quarter;
+    play bass_prog: note "D2", 115, quarter;
+    play electric_guitar: chord ["D4", "F4", "A4"], 110, quarter;
+    play synth_strings: chord ["D3", "F3", "A3"], 85, quarter;
+    wait quarter;
+}
+
+// 🚀 PARTE V: KERNEL SPACE SOLO (Epic guitar solo - 24 compassos)
+loop 12 {
+    // Solo épico de guitarra
+    play drums: kick, 127, quarter;
+    play drums: hihat, 100, quarter;
+    play bass_prog: note "A1", 127, quarter;
+    play electric_guitar: chord ["A3", "C4", "E4"], 120, quarter;
+    // Solo melódico ascendente
+    play lead_guitar: note "A4", 127, sixteenth;
+    wait sixteenth;
+    play lead_guitar: note "C5", 125, sixteenth;
+    wait sixteenth;
+    play lead_guitar: note "E5", 127, sixteenth;
+    wait sixteenth;
+    play lead_guitar: note "A5", 127, sixteenth;
+    wait sixteenth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 110, quarter;
+    play bass_prog: note "F1", 125, quarter;
+    play electric_guitar: chord ["F3", "A3", "C4"], 115, quarter;
+    play lead_guitar: note "C6", 127, eighth;
+    wait eighth;
+    play lead_guitar: note "A5", 120, eighth;
+    wait eighth;
+    
+    play drums: kick, 120, eighth;
+    play drums: hihat, 115, eighth;
+    play bass_prog: note "G1", 127, eighth;
+    play lead_guitar: note "G5", 125, eighth;
+    wait eighth;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 120, eighth;
+    play bass_prog: note "C2", 125, eighth;
+    play lead_guitar: note "E5", 127, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_prog: note "D2", 127, quarter;
+    play electric_guitar: chord ["D4", "F4", "A4"], 127, quarter;
+    play lead_guitar: chord ["D6", "F6", "A6"], 127, quarter;
+    play synth_strings: chord ["D2", "F2", "A2"], 100, quarter;
+    play synth_organ: chord ["D3", "F3", "A3"], 110, quarter;
+    wait quarter;
+}
+
+// 🌌 PARTE VI: KERNEL PANIC (Climax épico - 16 compassos)
+loop 8 {
+    // TODOS os instrumentos no máximo
+    play drums: kick, 127, quarter;
+    play drums: snare, 120, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_prog: note "A1", 127, quarter;
+    play electric_guitar: chord ["A3", "C4", "E4", "A4"], 127, quarter;
+    play lead_guitar: chord ["A5", "C6", "E6"], 127, quarter;
+    play synth_strings: chord ["A1", "C2", "E2"], 127, quarter;
+    play synth_organ: chord ["A3", "C4", "E4"], 127, quarter;
+    wait quarter;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 115, quarter;
+    play bass_prog: note "F1", 127, quarter;
+    play electric_guitar: chord ["F3", "A3", "C4", "F4"], 127, quarter;
+    play lead_guitar: chord ["F5", "A5", "C6"], 127, quarter;
+    play synth_strings: chord ["F1", "A1", "C2"], 120, quarter;
+    play synth_organ: chord ["F3", "A3", "C4"], 120, quarter;
+    wait quarter;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 127, eighth;
+    play bass_prog: note "G1", 127, eighth;
+    play lead_guitar: note "G6", 127, eighth;
+    wait eighth;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 127, eighth;
+    play bass_prog: note "C2", 127, eighth;
+    play lead_guitar: note "C7", 127, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_prog: note "D2", 127, quarter;
+    play electric_guitar: chord ["D4", "F4", "A4", "D5"], 127, quarter;
+    play lead_guitar: chord ["D6", "F6", "A6", "D7"], 127, quarter;
+    play synth_strings: chord ["D2", "F2", "A2"], 127, quarter;
+    play synth_organ: chord ["D4", "F4", "A4"], 127, quarter;
+    wait quarter;
+}
+
+// 🕊️ PARTE VII: GRACEFUL SHUTDOWN (Fade épico - 12 compassos)
+loop 6 {
+    // Fade out gradual
+    play drums: kick, 100, half;
+    play bass_prog: note "A1", 100, half;
+    play electric_guitar: chord ["A3", "C4", "E4"], 100, half;
+    play synth_strings: chord ["A2", "C3", "E3"], 90, half;
+    wait half;
+    
+    play bass_prog: note "F1", 80, half;
+    play acoustic_guitar: chord ["F3", "A3", "C4"], 80, half;
+    play synth_strings: chord ["F2", "A2", "C3"], 70, half;
+    wait half;
+}
+
+// Final suave
+    play acoustic_guitar: chord ["A3", "C4", "E4"], 60, whole;
+    play synth_strings: chord ["A1", "C2", "E2"], 50, whole;
+    wait whole;
+
+    play acoustic_guitar: note "A3", 40, whole;
+wait whole;
+
+export "stairway_to_kernel.wav";

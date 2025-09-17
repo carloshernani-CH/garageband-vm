@@ -1,0 +1,57 @@
+// 🎸 Rock com Bateria Simultânea - Power Chords + Drums Simultâneos
+// Rock clássico com bateria tocando simultaneamente
+
+bpm 120;
+timesig 4/4;
+
+// 🎸 Instrumentos
+instrument bass_inst: bass;
+instrument guitar_inst: guitar;
+
+// 🎵 Rock com bateria simultânea - 6 compassos
+loop 6 {
+    // BEAT 1 - Kick + Hi-hat
+    play drums: kick, 127, quarter;
+    play drums: hihat, 80, quarter;
+    wait quarter;
+    
+    // BEAT 2 - Snare + Hi-hat
+    play drums: snare, 127, quarter;
+    play drums: hihat, 60, quarter;
+    wait quarter;
+    
+    // BEAT 3 - Kick + Hi-hat
+    play drums: kick, 100, quarter;
+    play drums: hihat, 90, quarter;
+    wait quarter;
+    
+    // BEAT 4 - Snare + Hi-hat
+    play drums: snare, 127, quarter;
+    play drums: hihat, 70, quarter;
+    wait quarter;
+    
+    // Linha de baixo driving
+    play bass_inst: note "E2", 110, quarter;
+    wait quarter;
+    play bass_inst: note "G2", 100, quarter;
+    wait quarter;
+    play bass_inst: note "A2", 120, quarter;
+    wait quarter;
+    play bass_inst: note "B2", 110, quarter;
+    wait quarter;
+    
+    // Power chords
+    play guitar_inst: chord ["E3", "B3"], 100, quarter;
+    wait quarter;
+    play guitar_inst: chord ["G3", "D4"], 90, quarter;
+    wait quarter;
+    play guitar_inst: chord ["A3", "E4"], 110, quarter;
+    wait quarter;
+    play guitar_inst: chord ["B3", "F#4"], 100, quarter;
+    wait quarter;
+    
+    wait whole;
+}
+
+export "rock_com_bateria_simultanea.wav";
+

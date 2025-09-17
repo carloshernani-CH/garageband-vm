@@ -1,0 +1,77 @@
+// 🎛️ Electronic Dance - Dance Music com Bateria Eletrônica
+// Música eletrônica dançante com síntese
+
+bpm 128;
+timesig 4/4;
+
+// 🎸 Instrumentos eletrônicos
+instrument bass_synth: bass;
+instrument lead_synth: guitar;
+instrument pad_synth: guitar;
+
+// 🎵 8 compassos de dance music
+loop 8 {
+    // Bateria four-on-the-floor
+    play drums: kick, 127, quarter;
+    wait quarter;
+    play drums: kick, 127, quarter;
+    wait quarter;
+    play drums: kick, 127, quarter;
+    wait quarter;
+    play drums: kick, 127, quarter;
+    wait quarter;
+    
+    // Snare nos 2 e 4
+    wait quarter;
+    play drums: snare, 127, quarter;
+    wait quarter;
+    play drums: snare, 127, quarter;
+    wait quarter;
+    
+    // Hi-hats constantes
+    play drums: hihat, 80, eighth;
+    wait eighth;
+    play drums: hihat, 60, eighth;
+    wait eighth;
+    play drums: hihat, 80, eighth;
+    wait eighth;
+    play drums: hihat, 60, eighth;
+    wait eighth;
+    play drums: hihat, 80, eighth;
+    wait eighth;
+    play drums: hihat, 60, eighth;
+    wait eighth;
+    play drums: hihat, 80, eighth;
+    wait eighth;
+    play drums: hihat, 60, eighth;
+    wait eighth;
+    
+    // Bass synth
+    play bass_synth: note "C2", 120, quarter;
+    wait quarter;
+    play bass_synth: note "C2", 100, quarter;
+    wait quarter;
+    play bass_synth: note "G2", 120, quarter;
+    wait quarter;
+    play bass_synth: note "F2", 110, quarter;
+    wait quarter;
+    
+    // Lead synth melódico
+    play lead_synth: note "C5", 100, eighth;
+    wait eighth;
+    play lead_synth: note "D5", 90, eighth;
+    wait eighth;
+    play lead_synth: note "E5", 110, quarter;
+    wait quarter;
+    play lead_synth: note "G5", 120, quarter;
+    wait quarter;
+    play lead_synth: note "F5", 100, quarter;
+    wait quarter;
+    
+    // Pad harmônico
+    play pad_synth: chord ["C3", "E3", "G3"], 70, whole;
+    
+    wait whole;
+}
+
+export "electronic_dance.wav";

@@ -1,0 +1,320 @@
+// 🤘 SMELLS LIKE CLEAN CODE - Grunge Alternative Programming Anthem  
+// Inspirado em "Smells Like Teen Spirit" - Um hino grunge sobre código limpo
+// "Load up on tests, bring your friends, it's fun to lose and to pretend"
+
+bpm 117;
+timesig 4/4;
+
+// 🎸 Arsenal Grunge Autêntico
+instrument guitar_grunge: guitar;
+instrument bass_grunge: bass;
+instrument power_guitar: guitar;
+instrument lead_distorted: guitar;
+instrument clean_guitar: guitar;
+
+// 🔇 INTRO CLEAN - "Hello, hello, hello, how low?" (8 compassos)
+loop 4 {
+    // Clean guitar suave
+    play clean_guitar: note "F3", 70, quarter;
+    wait quarter;
+    play clean_guitar: note "F3", 65, quarter;
+    wait quarter;
+    play clean_guitar: note "Bb3", 75, quarter;
+    wait quarter;
+    play clean_guitar: note "Ab3", 70, quarter;
+    wait quarter;
+    
+    play clean_guitar: note "Db4", 80, quarter;
+    wait quarter;
+    play clean_guitar: note "Db4", 75, quarter;
+    wait quarter;
+    play clean_guitar: note "Bb3", 70, quarter;
+    wait quarter;
+    play clean_guitar: note "F3", 65, quarter;
+    wait quarter;
+}
+
+// 🥁 PRE-VERSE - Drums enter (4 compassos)
+loop 2 {
+    play drums: kick, 100, quarter;
+    play drums: hihat, 70, quarter;
+    play clean_guitar: chord ["F3", "Ab3", "C4"], 80, quarter;
+    play bass_grunge: note "F1", 90, quarter;
+    wait quarter;
+    
+    play drums: snare, 110, quarter;
+    play drums: hihat, 75, quarter;
+    play clean_guitar: chord ["Bb3", "Db4", "F4"], 85, quarter;
+    play bass_grunge: note "Bb1", 95, quarter;
+    wait quarter;
+    
+    play drums: kick, 95, eighth;
+    play drums: hihat, 80, eighth;
+    play bass_grunge: note "Ab1", 100, eighth;
+    wait eighth;
+    
+    play drums: kick, 105, eighth;
+    play drums: hihat, 85, eighth;
+    play bass_grunge: note "Db2", 105, eighth;
+    wait eighth;
+    
+    play drums: snare, 120, quarter;
+    play drums: hihat, 127, quarter;
+    play clean_guitar: chord ["Db4", "F4", "Ab4"], 90, quarter;
+    play bass_grunge: note "Db2", 110, quarter;
+    wait quarter;
+}
+
+// 🎸 VERSE 1 - "Load up on tests, bring your friends" (16 compassos)
+loop 8 {
+    // Grunge rhythm guitar entra
+    play drums: kick, 120, quarter;
+    play drums: hihat, 90, quarter;
+    play bass_grunge: note "F1", 120, quarter;
+    play guitar_grunge: chord ["F3", "Ab3", "C4"], 110, quarter;
+    wait quarter;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 95, quarter;
+    play bass_grunge: note "Bb1", 115, quarter;
+    play guitar_grunge: chord ["Bb3", "Db4", "F4"], 105, quarter;
+    wait quarter;
+    
+    play drums: kick, 115, eighth;
+    play drums: hihat, 100, eighth;
+    play bass_grunge: note "Ab1", 125, eighth;
+    play guitar_grunge: chord ["Ab3", "C4"], 120, eighth;
+    wait eighth;
+    
+    play drums: kick, 125, eighth;
+    play drums: hihat, 105, eighth;
+    play bass_grunge: note "Db2", 120, eighth;
+    play guitar_grunge: chord ["Db4", "F4"], 115, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_grunge: note "F2", 127, quarter;
+    play guitar_grunge: chord ["F4", "Ab4", "C5"], 127, quarter;
+    wait quarter;
+}
+
+// 🔥 PRE-CHORUS - "I feel stupid and contagious" (8 compassos)
+loop 4 {
+    // Build up com power chords
+    play drums: kick, 127, quarter;
+    play drums: hihat, 100, quarter;
+    play bass_grunge: note "F1", 127, quarter;
+    play power_guitar: chord ["F3", "C4"], 120, quarter;
+    play guitar_grunge: chord ["F4", "Ab4", "C5"], 115, quarter;
+    wait quarter;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 110, quarter;
+    play bass_grunge: note "Bb1", 125, quarter;
+    play power_guitar: chord ["Bb3", "F4"], 125, quarter;
+    play guitar_grunge: chord ["Bb4", "Db5", "F5"], 120, quarter;
+    wait quarter;
+    
+    play drums: kick, 125, eighth;
+    play drums: hihat, 115, eighth;
+    play bass_grunge: note "Ab1", 127, eighth;
+    play power_guitar: chord ["Ab3", "Eb4"], 127, eighth;
+    wait eighth;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 120, eighth;
+    play bass_grunge: note "Db2", 125, eighth;
+    play power_guitar: chord ["Db4", "Ab4"], 125, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_grunge: note "F2", 127, quarter;
+    play power_guitar: chord ["F4", "C5"], 127, quarter;
+    play guitar_grunge: chord ["F5", "Ab5", "C6"], 127, quarter;
+    wait quarter;
+}
+
+// 🤘 CHORUS - "Here we are now, refactoring!" (16 compassos)
+loop 8 {
+    // CHORUS EXPLOSIVO - grunge no máximo
+    play drums: kick, 127, quarter;
+    play drums: snare, 110, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_grunge: note "F1", 127, quarter;
+    play guitar_grunge: chord ["F3", "Ab3", "C4"], 127, quarter;
+    play power_guitar: chord ["F4", "Ab4", "C5"], 127, quarter;
+    play lead_distorted: note "F5", 120, quarter;
+    wait quarter;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 115, quarter;
+    play bass_grunge: note "Bb1", 127, quarter;
+    play guitar_grunge: chord ["Bb3", "Db4", "F4"], 127, quarter;
+    play power_guitar: chord ["Bb4", "Db5", "F5"], 127, quarter;
+    play lead_distorted: note "Bb5", 125, quarter;
+    wait quarter;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 127, eighth;
+    play bass_grunge: note "Ab1", 127, eighth;
+    play power_guitar: chord ["Ab4", "Eb5"], 127, eighth;
+    play lead_distorted: note "Ab6", 127, eighth;
+    wait eighth;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 127, eighth;
+    play bass_grunge: note "Db2", 127, eighth;
+    play power_guitar: chord ["Db5", "Ab5"], 127, eighth;
+    play lead_distorted: note "Db7", 127, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_grunge: note "F2", 127, quarter;
+    play guitar_grunge: chord ["F4", "Ab4", "C5"], 127, quarter;
+    play power_guitar: chord ["F5", "Ab5", "C6"], 127, quarter;
+    play lead_distorted: chord ["F6", "Ab6", "C7"], 127, quarter;
+    wait quarter;
+}
+
+// 🎸 INTERLUDE - Clean section (8 compassos)
+loop 4 {
+    // Volta ao clean guitar
+    play clean_guitar: note "F3", 80, quarter;
+    wait quarter;
+    play clean_guitar: note "F3", 75, quarter;
+    wait quarter;
+    play clean_guitar: note "Bb3", 85, quarter;
+    wait quarter;
+    play clean_guitar: note "Ab3", 80, quarter;
+    wait quarter;
+    
+    play drums: kick, 90, quarter;
+    play clean_guitar: note "Db4", 90, quarter;
+    play bass_grunge: note "Db2", 80, quarter;
+    wait quarter;
+    play clean_guitar: note "Db4", 85, quarter;
+    wait quarter;
+    play clean_guitar: note "Bb3", 80, quarter;
+    wait quarter;
+    play clean_guitar: note "F3", 75, quarter;
+    wait quarter;
+}
+
+// 🔥 GUITAR SOLO - "Debug this, debug that" (16 compassos)
+loop 8 {
+    // Solo grunge com feedback
+    play drums: kick, 127, quarter;
+    play drums: hihat, 100, quarter;
+    play bass_grunge: note "F1", 127, quarter;
+    play guitar_grunge: chord ["F3", "Ab3", "C4"], 120, quarter;
+    // Solo com bends e distorção
+    play lead_distorted: note "F4", 127, sixteenth;
+    wait sixteenth;
+    play lead_distorted: note "Ab4", 125, sixteenth;
+    wait sixteenth;
+    play lead_distorted: note "C5", 127, sixteenth;
+    wait sixteenth;
+    play lead_distorted: note "F5", 127, sixteenth;
+    wait sixteenth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 110, quarter;
+    play bass_grunge: note "Bb1", 125, quarter;
+    play guitar_grunge: chord ["Bb3", "Db4", "F4"], 115, quarter;
+    play lead_distorted: note "Bb5", 127, eighth;
+    wait eighth;
+    play lead_distorted: note "F5", 125, eighth;
+    wait eighth;
+    
+    play drums: kick, 120, eighth;
+    play drums: hihat, 115, eighth;
+    play bass_grunge: note "Ab1", 127, eighth;
+    play lead_distorted: note "Ab5", 127, eighth;
+    wait eighth;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 120, eighth;
+    play bass_grunge: note "Db2", 125, eighth;
+    play lead_distorted: note "Db6", 125, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_grunge: note "F2", 127, quarter;
+    play guitar_grunge: chord ["F4", "Ab4", "C5"], 127, quarter;
+    play lead_distorted: chord ["F6", "Ab6", "C7"], 127, quarter;
+    wait quarter;
+}
+
+// 🤘 FINAL CHORUS - "Here we are now, refactoring!" (16 compassos)
+loop 8 {
+    // Chorus final ainda mais intenso
+    play drums: kick, 127, quarter;
+    play drums: snare, 120, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_grunge: note "F1", 127, quarter;
+    play guitar_grunge: chord ["F3", "Ab3", "C4"], 127, quarter;
+    play power_guitar: chord ["F4", "Ab4", "C5"], 127, quarter;
+    play lead_distorted: chord ["F5", "Ab5", "C6"], 127, quarter;
+    wait quarter;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_grunge: note "Bb1", 127, quarter;
+    play guitar_grunge: chord ["Bb3", "Db4", "F4"], 127, quarter;
+    play power_guitar: chord ["Bb4", "Db5", "F5"], 127, quarter;
+    play lead_distorted: chord ["Bb5", "Db6", "F6"], 127, quarter;
+    wait quarter;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 127, eighth;
+    play bass_grunge: note "Ab1", 127, eighth;
+    play power_guitar: chord ["Ab4", "Eb5"], 127, eighth;
+    play lead_distorted: note "Ab7", 127, eighth;
+    wait eighth;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 127, eighth;
+    play bass_grunge: note "Db2", 127, eighth;
+    play power_guitar: chord ["Db5", "Ab5"], 127, eighth;
+    play lead_distorted: note "Db7", 127, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_grunge: note "F2", 127, quarter;
+    play guitar_grunge: chord ["F4", "Ab4", "C5"], 127, quarter;
+    play power_guitar: chord ["F5", "Ab5", "C6"], 127, quarter;
+    play lead_distorted: chord ["F6", "Ab6", "C7"], 127, quarter;
+    wait quarter;
+}
+
+// 🔇 OUTRO - Clean fade out (4 compassos)
+loop 2 {
+    play clean_guitar: note "F3", 60, quarter;
+    wait quarter;
+    play clean_guitar: note "F3", 50, quarter;
+    wait quarter;
+    play clean_guitar: note "Bb3", 65, quarter;
+    wait quarter;
+    play clean_guitar: note "Ab3", 55, quarter;
+    wait quarter;
+    
+    play clean_guitar: note "Db4", 70, quarter;
+    wait quarter;
+    play clean_guitar: note "Db4", 60, quarter;
+    wait quarter;
+    play clean_guitar: note "Bb3", 50, quarter;
+    wait quarter;
+    play clean_guitar: note "F3", 40, quarter;
+    wait quarter;
+}
+
+// Final fade
+play clean_guitar: chord ["F3", "Ab3", "C4"], 30, whole;
+wait whole;
+
+export "smells_like_clean_code.wav";

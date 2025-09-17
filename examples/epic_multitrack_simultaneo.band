@@ -1,0 +1,168 @@
+// 🎼 Epic Multitrack Simultâneo - Composição Épica com Tudo Simultâneo
+// Múltiplas camadas com bateria, bass e guitarra tocando simultaneamente
+
+bpm 128;
+timesig 4/4;
+
+// 🎸 Instrumentos para arranjo épico
+instrument bass_main: bass;
+instrument bass_sub: bass;
+instrument guitar_rhythm: guitar;
+instrument guitar_lead: guitar;
+instrument synth_pad: guitar;
+
+// 🌅 INTRO - Construção atmosférica (2 compassos)
+play synth_pad: chord ["C3", "E3", "G3"], 60, whole;
+wait whole;
+play synth_pad: chord ["A3", "C4", "E4"], 70, whole;
+wait whole;
+
+// 🎵 VERSE - TUDO SIMULTÂNEO (4 compassos)
+loop 4 {
+    // BEAT 1 - Kick + Hi-hat + Bass + Guitar + Synth + Lead simultâneos
+    play drums: kick, 127, quarter;
+    play drums: hihat, 80, quarter;
+    play bass_main: note "C2", 110, quarter;
+    play bass_sub: note "C1", 90, quarter;
+    play guitar_rhythm: chord ["C3", "E3", "G3"], 90, quarter;
+    play synth_pad: chord ["C3", "E3", "G3", "C4"], 70, quarter;
+    play guitar_lead: note "G4", 80, quarter;
+    wait quarter;
+    
+    // BEAT 2 - Snare + Hi-hat + Bass + Guitar + Synth + Lead simultâneos
+    play drums: snare, 127, quarter;
+    play drums: hihat, 60, quarter;
+    play bass_main: note "E2", 100, quarter;
+    play bass_sub: note "C1", 90, quarter;
+    play guitar_rhythm: chord ["A3", "C4", "E4"], 80, quarter;
+    play synth_pad: chord ["C3", "E3", "G3", "C4"], 70, quarter;
+    play guitar_lead: note "A4", 70, quarter;
+    wait quarter;
+    
+    // BEAT 3 - Kick + Hi-hat + Bass + Guitar + Synth + Lead simultâneos
+    play drums: kick, 100, quarter;
+    play drums: hihat, 90, quarter;
+    play bass_main: note "G2", 120, quarter;
+    play bass_sub: note "C1", 90, quarter;
+    play guitar_rhythm: chord ["F3", "A3", "C4"], 100, quarter;
+    play synth_pad: chord ["C3", "E3", "G3", "C4"], 70, quarter;
+    play guitar_lead: note "C5", 90, quarter;
+    wait quarter;
+    
+    // BEAT 4 - Snare + Hi-hat + Bass + Guitar + Synth + Lead simultâneos
+    play drums: snare, 120, quarter;
+    play drums: hihat, 70, quarter;
+    play bass_main: note "C3", 110, quarter;
+    play bass_sub: note "C1", 90, quarter;
+    play guitar_rhythm: chord ["G3", "B3", "D4"], 90, quarter;
+    play synth_pad: chord ["C3", "E3", "G3", "C4"], 70, quarter;
+    play guitar_lead: note "E5", 100, quarter;
+    wait quarter;
+    
+    wait whole;
+}
+
+// 🔥 CHORUS - EXPLOSÃO TOTAL SIMULTÂNEA (4 compassos)
+loop 4 {
+    // BEAT 1 - TUDO junto mais intenso
+    play drums: kick, 127, quarter;
+    play drums: hihat, 90, quarter;
+    play bass_main: note "C2", 127, quarter;
+    play bass_sub: note "C1", 120, quarter;
+    play guitar_rhythm: chord ["C3", "G3", "C4"], 120, quarter;
+    play synth_pad: chord ["C3", "Eb3", "G3", "C4"], 80, quarter;
+    play guitar_lead: note "C5", 110, quarter;
+    wait quarter;
+    
+    // BEAT 2 - TUDO junto mais intenso
+    play drums: snare, 127, quarter;
+    play drums: hihat, 70, quarter;
+    play bass_main: note "Eb2", 120, quarter;
+    play bass_sub: note "C1", 120, quarter;
+    play guitar_rhythm: chord ["Eb3", "Bb3", "Eb4"], 110, quarter;
+    play synth_pad: chord ["C3", "Eb3", "G3", "C4"], 80, quarter;
+    play guitar_lead: note "Eb5", 100, quarter;
+    wait quarter;
+    
+    // BEAT 3 - TUDO junto mais intenso
+    play drums: kick, 120, quarter;
+    play drums: hihat, 100, quarter;
+    play bass_main: note "F2", 127, quarter;
+    play bass_sub: note "C1", 120, quarter;
+    play guitar_rhythm: chord ["F3", "C4", "F4"], 127, quarter;
+    play synth_pad: chord ["C3", "Eb3", "G3", "C4"], 80, quarter;
+    play guitar_lead: note "F5", 120, quarter;
+    wait quarter;
+    
+    // BEAT 4 - TUDO junto mais intenso
+    play drums: snare, 127, quarter;
+    play drums: hihat, 80, quarter;
+    play bass_main: note "G2", 120, quarter;
+    play bass_sub: note "C1", 120, quarter;
+    play guitar_rhythm: chord ["G3", "D4", "G4"], 120, quarter;
+    play synth_pad: chord ["C3", "Eb3", "G3", "C4"], 80, quarter;
+    play guitar_lead: note "G5", 127, quarter;
+    wait quarter;
+    
+    wait whole;
+}
+
+// 🎼 FINAL EPIC SIMULTÂNEO (2 compassos)
+loop 2 {
+    // BEAT ÉPICO - TUDO JUNTO NO MÁXIMO
+    play drums: kick, 127, quarter;
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_main: note "C2", 127, quarter;
+    play bass_sub: note "C0", 100, quarter;
+    play guitar_rhythm: chord ["C3", "E3", "G3", "C4"], 127, quarter;
+    play guitar_lead: chord ["C5", "E5", "G5"], 120, quarter;
+    play synth_pad: chord ["C2", "E2", "G2", "C3"], 90, quarter;
+    wait quarter;
+    
+    play drums: kick, 127, quarter;
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_main: note "G2", 120, quarter;
+    play bass_sub: note "C0", 100, quarter;
+    play guitar_rhythm: chord ["C3", "E3", "G3", "C4"], 127, quarter;
+    play guitar_lead: chord ["C5", "E5", "G5"], 120, quarter;
+    play synth_pad: chord ["C2", "E2", "G2", "C3"], 90, quarter;
+    wait quarter;
+    
+    play drums: kick, 127, quarter;
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_main: note "F2", 127, quarter;
+    play bass_sub: note "C0", 100, quarter;
+    play guitar_rhythm: chord ["C3", "E3", "G3", "C4"], 127, quarter;
+    play guitar_lead: chord ["C5", "E5", "G5"], 120, quarter;
+    play synth_pad: chord ["C2", "E2", "G2", "C3"], 90, quarter;
+    wait quarter;
+    
+    play drums: kick, 127, quarter;
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_main: note "C3", 120, quarter;
+    play bass_sub: note "C0", 100, quarter;
+    play guitar_rhythm: chord ["C3", "E3", "G3", "C4"], 127, quarter;
+    play guitar_lead: chord ["C5", "E5", "G5"], 120, quarter;
+    play synth_pad: chord ["C2", "E2", "G2", "C3"], 90, quarter;
+    wait quarter;
+    
+    wait whole;
+}
+
+// 🌅 OUTRO - Resolução épica TOTAL
+play drums: kick, 127, whole;
+play drums: snare, 127, whole;
+play drums: hihat, 127, whole;
+play bass_main: note "C1", 127, whole;
+play bass_sub: note "C0", 100, whole;
+play guitar_rhythm: chord ["C3", "E3", "G3", "C4"], 127, whole;
+play guitar_lead: chord ["C5", "E5", "G5"], 120, whole;
+play synth_pad: chord ["C2", "E2", "G2", "C3"], 100, whole;
+wait whole;
+
+export "epic_multitrack_simultaneo.wav";
+

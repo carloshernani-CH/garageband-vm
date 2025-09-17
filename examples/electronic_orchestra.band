@@ -1,0 +1,312 @@
+// 🎹 ELECTRONIC ORCHESTRA - Sinfonia Eletrônica Épica
+// Fusão de música eletrônica com elementos orquestrais
+
+bpm 132;
+timesig 4/4;
+
+// 🎛️ Orquestra Eletrônica Completa
+instrument bass_808: bass;
+instrument bass_sub: bass;
+instrument bass_synth: bass;
+instrument lead_analog: guitar;
+instrument lead_digital: guitar;
+instrument pad_strings: guitar;
+instrument pad_choir: guitar;
+instrument arp_crystal: guitar;
+instrument pluck_synth: guitar;
+
+// 🌌 INTRO ESPACIAL (16 compassos)
+loop 8 {
+    // Pads atmosféricos crescendo
+    play pad_strings: chord ["C1", "E1", "G1"], 30, whole;
+    play pad_choir: chord ["C2", "E2", "G2"], 25, whole;
+    wait quarter;
+    
+    play pad_strings: chord ["F1", "A1", "C2"], 35, whole;
+    play pad_choir: chord ["F2", "A2", "C3"], 30, whole;
+    play arp_crystal: note "C4", 40, quarter;
+    wait quarter;
+    play arp_crystal: note "E4", 40, quarter;
+    wait quarter;
+    play arp_crystal: note "G4", 40, quarter;
+    wait quarter;
+    play arp_crystal: note "C5", 40, quarter;
+    wait quarter;
+}
+
+// 🥁 ENTRADA RÍTMICA (12 compassos)
+loop 12 {
+    // Bateria eletrônica + bass 808
+    play drums: kick, 110, quarter;
+    play drums: hihat, 60, quarter;
+    play bass_808: note "C1", 100, quarter;
+    play pad_strings: chord ["C2", "E2", "G2"], 50, quarter;
+    play arp_crystal: note "C4", 70, eighth;
+    wait eighth;
+    play arp_crystal: note "G4", 70, eighth;
+    wait eighth;
+    
+    play drums: snare, 120, quarter;
+    play drums: hihat, 80, quarter;
+    play bass_808: note "E1", 90, quarter;
+    play pad_strings: chord ["E2", "G2", "B2"], 55, quarter;
+    play arp_crystal: note "E5", 75, quarter;
+    wait quarter;
+    
+    play drums: kick, 105, eighth;
+    play drums: hihat, 70, eighth;
+    play bass_808: note "G1", 110, eighth;
+    play pluck_synth: note "G3", 80, eighth;
+    wait eighth;
+    
+    play drums: kick, 115, eighth;
+    play drums: hihat, 90, eighth;
+    play bass_808: note "A1", 105, eighth;
+    play pluck_synth: note "A3", 85, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 100, quarter;
+    play bass_808: note "C2", 120, quarter;
+    play lead_analog: note "C4", 90, quarter;
+    play arp_crystal: chord ["C5", "E5", "G5"], 80, quarter;
+    wait quarter;
+}
+
+// 🎹 BUILD UP PROGRESSIVO (16 compassos)
+loop 16 {
+    // Camadas se acumulando
+    play drums: kick, 120, quarter;
+    play drums: hihat, 80, quarter;
+    play bass_808: note "C1", 120, quarter;
+    play bass_sub: note "C0", 100, quarter;
+    play lead_analog: note "C4", 100, quarter;
+    play pad_strings: chord ["C2", "E2", "G2", "C3"], 70, quarter;
+    play arp_crystal: note "C5", 90, sixteenth;
+    wait sixteenth;
+    play arp_crystal: note "E5", 90, sixteenth;
+    wait sixteenth;
+    play arp_crystal: note "G5", 90, sixteenth;
+    wait sixteenth;
+    play arp_crystal: note "C6", 90, sixteenth;
+    wait sixteenth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 100, quarter;
+    play bass_808: note "F1", 115, quarter;
+    play bass_sub: note "C0", 100, quarter;
+    play lead_analog: chord ["F4", "A4"], 95, quarter;
+    play pad_choir: chord ["F2", "A2", "C3"], 75, quarter;
+    play pluck_synth: note "F4", 100, eighth;
+    wait eighth;
+    play pluck_synth: note "A4", 100, eighth;
+    wait eighth;
+    
+    play drums: kick, 110, eighth;
+    play drums: hihat, 110, eighth;
+    play bass_808: note "G1", 125, eighth;
+    play bass_sub: note "C0", 95, eighth;
+    play lead_digital: note "G4", 110, eighth;
+    wait eighth;
+    
+    play drums: kick, 125, eighth;
+    play drums: hihat, 120, eighth;
+    play bass_808: note "A1", 120, eighth;
+    play bass_sub: note "C0", 95, eighth;
+    play lead_digital: note "A4", 115, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_808: note "C2", 127, quarter;
+    play bass_sub: note "C0", 110, quarter;
+    play lead_analog: chord ["C4", "E4", "G4"], 120, quarter;
+    play lead_digital: chord ["C5", "E5", "G5"], 115, quarter;
+    play pad_strings: chord ["C2", "E2", "G2", "C3"], 80, quarter;
+    play arp_crystal: chord ["C6", "E6", "G6"], 100, quarter;
+    wait quarter;
+}
+
+// 🚀 DROP ELETRÔNICO ÉPICO (20 compassos)
+loop 20 {
+    // EXPLOSÃO TOTAL - todos os sintetizadores
+    play drums: kick, 127, quarter;
+    play drums: snare, 110, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_808: note "C1", 127, quarter;
+    play bass_sub: note "C0", 127, quarter;
+    play bass_synth: note "C2", 120, quarter;
+    play lead_analog: chord ["C4", "E4", "G4", "C5"], 127, quarter;
+    play lead_digital: chord ["E5", "G5", "C6", "E6"], 127, quarter;
+    play pad_strings: chord ["C1", "E1", "G1", "C2"], 110, quarter;
+    play pad_choir: chord ["C3", "E3", "G3"], 120, quarter;
+    play arp_crystal: chord ["C6", "E6", "G6", "C7"], 120, quarter;
+    play pluck_synth: note "C5", 110, quarter;
+    wait quarter;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 100, quarter;
+    play bass_808: note "F1", 125, quarter;
+    play bass_sub: note "C0", 120, quarter;
+    play bass_synth: note "F2", 115, quarter;
+    play lead_analog: chord ["F4", "A4", "C5", "F5"], 125, quarter;
+    play lead_digital: chord ["A5", "C6", "F6", "A6"], 125, quarter;
+    play pad_strings: chord ["F1", "A1", "C2", "F2"], 105, quarter;
+    play pad_choir: chord ["F3", "A3", "C4"], 115, quarter;
+    play arp_crystal: chord ["F6", "A6", "C7", "F7"], 115, quarter;
+    play pluck_synth: note "F5", 105, quarter;
+    wait quarter;
+    
+    play drums: kick, 120, eighth;
+    play drums: hihat, 110, eighth;
+    play bass_808: note "G1", 127, eighth;
+    play bass_sub: note "C0", 115, eighth;
+    play bass_synth: note "G2", 120, eighth;
+    play lead_digital: note "G6", 127, eighth;
+    play arp_crystal: note "G7", 120, eighth;
+    wait eighth;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 127, eighth;
+    play bass_808: note "A1", 125, eighth;
+    play bass_sub: note "C0", 115, eighth;
+    play bass_synth: note "A2", 125, eighth;
+    play lead_digital: note "A6", 125, eighth;
+    play arp_crystal: note "A7", 125, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_808: note "C2", 127, quarter;
+    play bass_sub: note "C0", 127, quarter;
+    play bass_synth: note "C3", 127, quarter;
+    play lead_analog: chord ["C5", "G5", "C6"], 127, quarter;
+    play lead_digital: chord ["G6", "C7", "G7"], 127, quarter;
+    play pad_strings: chord ["C2", "E2", "G2", "C3"], 120, quarter;
+    play pad_choir: chord ["C4", "E4", "G4"], 127, quarter;
+    play arp_crystal: chord ["C7", "E7", "G7"], 127, quarter;
+    play pluck_synth: chord ["C5", "E5", "G5"], 120, quarter;
+    wait quarter;
+}
+
+// 🎭 BREAKDOWN ATMOSFÉRICO (12 compassos)
+loop 12 {
+    // Seção mais experimental
+    play drums: kick, 90, half;
+    play drums: hihat, 50, half;
+    play bass_808: note "Am1", 80, half;
+    play pad_strings: chord ["A0", "C1", "E1", "A1"], 90, half;
+    play pad_choir: chord ["A2", "C3", "E3"], 80, half;
+    play arp_crystal: note "A4", 70, eighth;
+    wait eighth;
+    play arp_crystal: note "C5", 70, eighth;
+    wait eighth;
+    play arp_crystal: note "E5", 70, eighth;
+    wait eighth;
+    play arp_crystal: note "A5", 70, eighth;
+    wait eighth;
+    
+    play drums: snare, 100, half;
+    play drums: hihat, 60, half;
+    play bass_808: note "F1", 85, half;
+    play pad_strings: chord ["F0", "A0", "C1", "F1"], 95, half;
+    play pad_choir: chord ["F2", "A2", "C3"], 85, half;
+    play pluck_synth: chord ["F4", "A4", "C5"], 90, half;
+    wait half;
+}
+
+// 🌪️ SEGUNDO DROP - MAIS INTENSO (24 compassos)
+loop 24 {
+    // Ainda mais camadas e complexidade
+    play drums: kick, 127, quarter;
+    play drums: snare, 120, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_808: note "C1", 127, quarter;
+    play bass_sub: note "C0", 127, quarter;
+    play bass_synth: note "C2", 127, quarter;
+    play lead_analog: chord ["C4", "G4", "C5", "E5"], 127, quarter;
+    play lead_digital: chord ["G5", "C6", "E6", "G6"], 127, quarter;
+    play pad_strings: chord ["C0", "E0", "G0", "C1"], 120, quarter;
+    play pad_choir: chord ["C3", "E3", "G3", "C4"], 127, quarter;
+    play arp_crystal: chord ["C6", "E6", "G6", "C7"], 127, quarter;
+    play pluck_synth: chord ["E4", "G4", "C5"], 120, quarter;
+    wait quarter;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 110, quarter;
+    play bass_808: note "E1", 125, quarter;
+    play bass_sub: note "C0", 125, quarter;
+    play bass_synth: note "E2", 125, quarter;
+    play lead_analog: chord ["E4", "B4", "E5", "G5"], 125, quarter;
+    play lead_digital: chord ["B5", "E6", "G6", "B6"], 125, quarter;
+    play pad_strings: chord ["E0", "G0", "B0", "E1"], 115, quarter;
+    play pad_choir: chord ["E3", "G3", "B3", "E4"], 125, quarter;
+    play arp_crystal: chord ["E6", "G6", "B6", "E7"], 125, quarter;
+    play pluck_synth: chord ["G4", "B4", "E5"], 115, quarter;
+    wait quarter;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 127, eighth;
+    play bass_808: note "G1", 127, eighth;
+    play bass_sub: note "C0", 120, eighth;
+    play bass_synth: note "G2", 127, eighth;
+    play lead_digital: chord ["G6", "D7"], 127, eighth;
+    play arp_crystal: note "G7", 127, eighth;
+    wait eighth;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 127, eighth;
+    play bass_808: note "A1", 127, eighth;
+    play bass_sub: note "C0", 120, eighth;
+    play bass_synth: note "A2", 127, eighth;
+    play lead_digital: chord ["A6", "E7"], 127, eighth;
+    play arp_crystal: note "A7", 127, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_808: note "C2", 127, quarter;
+    play bass_sub: note "C0", 127, quarter;
+    play bass_synth: note "C3", 127, quarter;
+    play lead_analog: chord ["C5", "G5", "C6", "E6"], 127, quarter;
+    play lead_digital: chord ["G6", "C7", "E7", "G7"], 127, quarter;
+    play pad_strings: chord ["C1", "E1", "G1", "C2"], 127, quarter;
+    play pad_choir: chord ["C4", "E4", "G4", "C5"], 127, quarter;
+    play arp_crystal: chord ["C7", "E7", "G7", "C8"], 127, quarter;
+    play pluck_synth: chord ["C5", "E5", "G5", "C6"], 127, quarter;
+    wait quarter;
+}
+
+// 🌅 OUTRO ORQUESTRAL (16 compassos)
+loop 8 {
+    // Final cinematográfico
+    play drums: kick, 100, whole;
+    play drums: snare, 100, whole;
+    play bass_808: note "C1", 100, whole;
+    play bass_sub: note "C0", 100, whole;
+    play lead_analog: chord ["C3", "E3", "G3", "C4"], 120, whole;
+    play pad_strings: chord ["C0", "E0", "G0", "C1"], 127, whole;
+    play pad_choir: chord ["C2", "E2", "G2", "C3"], 120, whole;
+    play arp_crystal: chord ["C5", "E5", "G5"], 100, whole;
+    wait quarter;
+}
+
+// Fade orquestral
+play bass_808: note "C1", 70, whole;
+play pad_strings: chord ["C0", "E0", "G0"], 100, whole;
+play pad_choir: chord ["C2", "E2", "G2"], 90, whole;
+wait quarter;
+
+play bass_808: note "C1", 40, whole;
+play pad_strings: chord ["C0", "E0", "G0"], 70, whole;
+play pad_choir: chord ["C2", "E2", "G2"], 60, whole;
+wait quarter;
+
+play pad_strings: chord ["C0", "E0", "G0"], 40, whole;
+play pad_choir: chord ["C2", "E2", "G2"], 30, whole;
+wait quarter;
+
+play pad_strings: chord ["C0", "E0", "G0"], 20, whole;
+wait quarter;
+
+export "electronic_orchestra.wav";

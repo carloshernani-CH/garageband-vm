@@ -1,0 +1,42 @@
+// 🔥 Trap com Bateria Simultânea - Batida Real Simultânea
+// Demonstra bateria tocando simultaneamente + 808s
+
+bpm 140;
+timesig 4/4;
+
+// 🎸 Instrumentos
+instrument bass_inst: bass;
+instrument guitar_inst: guitar;
+
+// 🎵 8 compassos de trap com bateria simultânea
+loop 8 {
+    // COMPASSO 1 - Kick + Hi-hats simultâneos
+    play drums: kick, 127, quarter;
+    play drums: hihat, 60, quarter;
+    wait quarter;
+    
+    play drums: kick, 100, quarter;
+    play drums: hihat, 80, quarter;
+    wait quarter;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 90, quarter;
+    wait quarter;
+    
+    play drums: kick, 80, quarter;
+    play drums: hihat, 70, quarter;
+    wait quarter;
+    
+    // 808 bass
+    play bass_inst: note "F1", 120, eighth;
+    wait quarter;
+    play bass_inst: note "Ab1", 100, quarter;
+    wait half;
+    play bass_inst: note "C2", 110, eighth;
+    wait eighth;
+    
+    wait whole;
+}
+
+export "trap_com_bateria_simultanea.wav";
+

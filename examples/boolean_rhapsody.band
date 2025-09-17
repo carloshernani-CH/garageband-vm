@@ -1,0 +1,247 @@
+// 🎭 BOOLEAN RHAPSODY - Epic Operatic Rock Programming Symphony
+// Inspirado em "Bohemian Rhapsody" - Uma ópera rock sobre lógica booleana
+// "Is this the real life? Is this just syntax?" 
+
+bpm 76;
+timesig 4/4;
+
+// 🎹 Orquestra Operática Completa
+instrument piano_ballad: guitar;
+instrument opera_voice: guitar;
+instrument rock_guitar: guitar;
+instrument bass_opera: bass;
+instrument strings_orchestra: guitar;
+instrument organ_cathedral: guitar;
+instrument lead_epic: guitar;
+
+// 🎭 PARTE I: BALLAD INTRO - "Is this the real life?" (12 compassos)
+loop 6 {
+    // Piano balada suave
+    play piano_ballad: note "Bb3", 70, quarter;
+    wait quarter;
+    play piano_ballad: chord ["F3", "A3", "C4"], 65, half;
+    wait half;
+    play piano_ballad: note "Bb3", 60, quarter;
+    wait quarter;
+    
+    play piano_ballad: chord ["Bb3", "D4", "F4"], 70, quarter;
+    wait quarter;
+    play piano_ballad: chord ["C4", "E4", "G4"], 75, half;
+    wait half;
+    play piano_ballad: note "F3", 65, quarter;
+    wait quarter;
+}
+
+// 🎵 PARTE II: CONFESSION - "Mama, just killed a thread" (16 compassos)
+loop 8 {
+    // Voice melody enters
+    play piano_ballad: chord ["Bb3", "D4", "F4"], 80, quarter;
+    play opera_voice: note "Bb4", 85, quarter;
+    wait quarter;
+    
+    play piano_ballad: chord ["F3", "A3", "C4"], 75, quarter;
+    play opera_voice: note "A4", 80, quarter;
+    wait quarter;
+    
+    play piano_ballad: chord ["G3", "Bb3", "D4"], 85, quarter;
+    play opera_voice: note "G4", 90, quarter;
+    wait quarter;
+    
+    play piano_ballad: chord ["C4", "E4", "G4"], 80, quarter;
+    play opera_voice: note "C5", 85, quarter;
+    play bass_opera: note "C2", 70, quarter;
+    wait quarter;
+}
+
+// 🎼 PARTE III: OPERATIC SECTION - "Scaramouche, Scaramouche, will you do the Fandango?" (20 compassos)
+loop 10 {
+    // Seção operática com órgão
+    play organ_cathedral: chord ["Bb2", "D3", "F3"], 90, quarter;
+    play opera_voice: note "F4", 95, quarter;
+    play strings_orchestra: chord ["Bb3", "D4", "F4"], 80, quarter;
+    wait quarter;
+    
+    play organ_cathedral: chord ["C3", "E3", "G3"], 85, quarter;
+    play opera_voice: note "G4", 90, quarter;
+    play strings_orchestra: chord ["C4", "E4", "G4"], 75, quarter;
+    wait quarter;
+    
+    play organ_cathedral: chord ["A2", "C3", "E3"], 95, eighth;
+    play opera_voice: note "A4", 100, eighth;
+    play strings_orchestra: chord ["A3", "C4", "E4"], 85, eighth;
+    wait eighth;
+    
+    play organ_cathedral: chord ["Bb2", "D3", "F3"], 90, eighth;
+    play opera_voice: note "Bb4", 95, eighth;
+    play strings_orchestra: chord ["Bb3", "D4", "F4"], 80, eighth;
+    wait eighth;
+    
+    play drums: kick, 100, quarter;
+    play drums: snare, 90, quarter;
+    play organ_cathedral: chord ["F3", "A3", "C4"], 100, quarter;
+    play opera_voice: note "C5", 105, quarter;
+    play strings_orchestra: chord ["F4", "A4", "C5"], 90, quarter;
+    play bass_opera: note "F1", 95, quarter;
+    wait quarter;
+}
+
+// ⚡ PARTE IV: ROCK EXPLOSION - "So you think you can stop me and spit in my I/O?" (24 compassos)
+loop 12 {
+    // ROCK PESADO com todos os instrumentos
+    play drums: kick, 127, quarter;
+    play drums: hihat, 100, quarter;
+    play bass_opera: note "E1", 127, quarter;
+    play rock_guitar: chord ["E3", "G3", "B3"], 120, quarter;
+    play lead_epic: note "E5", 115, quarter;
+    play strings_orchestra: chord ["E2", "G2", "B2"], 100, quarter;
+    wait quarter;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 110, quarter;
+    play bass_opera: note "A1", 125, quarter;
+    play rock_guitar: chord ["A3", "C4", "E4"], 125, quarter;
+    play lead_epic: note "A5", 120, quarter;
+    play strings_orchestra: chord ["A2", "C3", "E3"], 105, quarter;
+    wait quarter;
+    
+    play drums: kick, 120, eighth;
+    play drums: hihat, 115, eighth;
+    play bass_opera: note "D2", 127, eighth;
+    play rock_guitar: power_chord ["D4", "A4"], 127, eighth;
+    play lead_epic: note "D6", 127, eighth;
+    wait eighth;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 120, eighth;
+    play bass_opera: note "G1", 125, eighth;
+    play rock_guitar: chord ["G3", "B3", "D4"], 125, eighth;
+    play lead_epic: note "G5", 125, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_opera: note "C2", 127, quarter;
+    play rock_guitar: chord ["C4", "E4", "G4"], 127, quarter;
+    play lead_epic: chord ["C6", "E6", "G6"], 127, quarter;
+    play strings_orchestra: chord ["C3", "E3", "G3"], 110, quarter;
+    play organ_cathedral: chord ["C2", "E2", "G2"], 115, quarter;
+    wait quarter;
+}
+
+// 🎸 PARTE V: GUITAR SOLO - "Can't do this to me, baby!" (20 compassos)
+loop 10 {
+    // Solo de guitarra épico
+    play drums: kick, 127, quarter;
+    play drums: hihat, 100, quarter;
+    play bass_opera: note "Bb1", 127, quarter;
+    play rock_guitar: chord ["Bb3", "D4", "F4"], 120, quarter;
+    // Solo ascendente
+    play lead_epic: note "Bb4", 127, sixteenth;
+    wait sixteenth;
+    play lead_epic: note "D5", 125, sixteenth;
+    wait sixteenth;
+    play lead_epic: note "F5", 127, sixteenth;
+    wait sixteenth;
+    play lead_epic: note "Bb5", 127, sixteenth;
+    wait sixteenth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 110, quarter;
+    play bass_opera: note "F1", 125, quarter;
+    play rock_guitar: chord ["F3", "A3", "C4"], 115, quarter;
+    play lead_epic: note "D6", 127, eighth;
+    wait eighth;
+    play lead_epic: note "C6", 125, eighth;
+    wait eighth;
+    
+    play drums: kick, 120, eighth;
+    play drums: hihat, 115, eighth;
+    play bass_opera: note "G1", 127, eighth;
+    play lead_epic: note "Bb5", 127, eighth;
+    wait eighth;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 120, eighth;
+    play bass_opera: note "C2", 125, eighth;
+    play lead_epic: note "A5", 125, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_opera: note "F2", 127, quarter;
+    play rock_guitar: chord ["F4", "A4", "C5"], 127, quarter;
+    play lead_epic: chord ["F6", "A6", "C7"], 127, quarter;
+    play strings_orchestra: chord ["F3", "A3", "C4"], 115, quarter;
+    wait quarter;
+}
+
+// 🌟 PARTE VI: CLIMAX OPERÁTICO - "Nothing really matters" (16 compassos)
+loop 8 {
+    // Clímax com toda a orquestra
+    play drums: kick, 127, quarter;
+    play drums: snare, 120, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_opera: note "Bb1", 127, quarter;
+    play rock_guitar: chord ["Bb3", "D4", "F4", "Bb4"], 127, quarter;
+    play lead_epic: chord ["Bb5", "D6", "F6"], 127, quarter;
+    play opera_voice: note "Bb5", 127, quarter;
+    play strings_orchestra: chord ["Bb2", "D3", "F3"], 127, quarter;
+    play organ_cathedral: chord ["Bb1", "D2", "F2"], 127, quarter;
+    wait quarter;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 115, quarter;
+    play bass_opera: note "F1", 127, quarter;
+    play rock_guitar: chord ["F3", "A3", "C4", "F4"], 127, quarter;
+    play lead_epic: chord ["F5", "A5", "C6"], 127, quarter;
+    play opera_voice: note "A5", 125, quarter;
+    play strings_orchestra: chord ["F2", "A2", "C3"], 120, quarter;
+    play organ_cathedral: chord ["F1", "A1", "C2"], 120, quarter;
+    wait quarter;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 127, eighth;
+    play bass_opera: note "G1", 127, eighth;
+    play lead_epic: note "G6", 127, eighth;
+    play opera_voice: note "G5", 127, eighth;
+    wait eighth;
+    
+    play drums: kick, 127, eighth;
+    play drums: hihat, 127, eighth;
+    play bass_opera: note "C2", 127, eighth;
+    play lead_epic: note "C7", 127, eighth;
+    play opera_voice: note "C6", 127, eighth;
+    wait eighth;
+    
+    play drums: snare, 127, quarter;
+    play drums: hihat, 127, quarter;
+    play bass_opera: note "Bb2", 127, quarter;
+    play rock_guitar: chord ["Bb4", "D5", "F5"], 127, quarter;
+    play lead_epic: chord ["Bb6", "D7", "F7"], 127, quarter;
+    play opera_voice: chord ["Bb5", "D6"], 127, quarter;
+    play strings_orchestra: chord ["Bb3", "D4", "F4"], 127, quarter;
+    play organ_cathedral: chord ["Bb2", "D3", "F3"], 127, quarter;
+    wait quarter;
+}
+
+// 🕊️ PARTE VII: CODA FINAL - "Any way the wind blows..." (8 compassos)
+loop 4 {
+    // Volta ao piano suave
+    play piano_ballad: chord ["Bb3", "D4", "F4"], 80, half;
+    play strings_orchestra: chord ["Bb2", "D3", "F3"], 60, half;
+    wait half;
+    
+    play piano_ballad: chord ["F3", "A3", "C4"], 70, half;
+    play strings_orchestra: chord ["F2", "A2", "C3"], 50, half;
+    wait half;
+}
+
+// Final suave
+play piano_ballad: chord ["Bb3", "D4", "F4"], 60, whole;
+play strings_orchestra: chord ["Bb1", "D2", "F2"], 40, whole;
+wait whole;
+
+play piano_ballad: note "Bb3", 30, whole;
+wait whole;
+
+export "boolean_rhapsody.wav";
